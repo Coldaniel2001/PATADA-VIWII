@@ -24,24 +24,40 @@
         </section>
 
         <section class="desktop-2">
-            <div class="box">
-                <div class="quien-eres">
-                    <h3>¿QUIÉN ERES?</h3>
+            <form>
+                <div class="box-padre">
+                    <div class="box">
+                        <div class="quien-eres">
+                            <label class="label-not" for="quien-eres"><h3>¿QUIÉN ERES?</h3></label>
+                            <input type="text" id="quien-eres" name="quien-eres">
+                        </div>
+                        <div class="dificultad">
+                            <h3>DIFICULTAD</h3>
+                            <input type="radio" id="facil" name="text" value="text">
+                            <label for="facil">Fácil</label>
+                            <input type="radio" id="dificil" name="text" value="text">
+                            <label for="dificil">Difícil</label>
+                        </div>
+                        <div class="patear-cara">
+                            <h3>¿A QUIÉN TE GUSTARÍA PATEAR?</h3>
+                            <input type="radio" id="inaki" name="text2" value="text">
+                            <label for="inaki">Iñaki</label>
+                            <input type="radio" id="wilson" name="text2" value="text">
+                            <label for="wilson">Wilson</label>
+                            <input type="radio" id="victor" name="text2" value="text">
+                            <label for="victor">Victor</label>
+                            <div>
+                                <img class="fotos" src="assets/inaki.png" alt="Iñaki">
+                                <img class="fotos" src="assets/wilson.png" alt="Wilson">
+                                <img class="fotos" src="assets/victor.png" alt="Victor">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="dificultad">
-                    <h3>DIFICULTAD</h3>
-                    <input type="radio" id="facil" name="text" value="text">
-                    <label for="facil">Fácil</label>
-                    <input type="radio" id="dificil" name="text" value="text">
-                    <label for="dificil">Difícil</label>
+                <div class="submit-div">
+                    <input class="submit" type="submit" value="Jugar">
                 </div>
-                <div class="patear-cara">
-                    <h3>¿A QUIÉN TE GUSTARÍA PATEAR?</h3>
-                </div>
-            </div>
-            <div class="boton-jugar-padre">
-                
-            </div>
+            </form>
         </section>
     </main>
 </body>
