@@ -1,9 +1,71 @@
 body {
     width: 1420px;
     height: 710px;
-    background-color: red;
 }
 
 .up-to-face {
     margin-top: -553px;
+}
+
+.who-face-pattle {
+    background-color: grey;
+    width: 1420px;
+    height: 710px;
+    padding-top: 250px;
+}
+
+.who-box {
+    background-color: #A79328;
+    text-align: center;
+    width: 40%;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border: 2px solid black;
+}
+
+.who-box h2{
+    color: white;
+    border-bottom: 1px solid rgb(233, 233, 233);
+    padding-bottom: 20px;
+  
+}
+
+.flex-box {
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 40px;
+}
+
+.flex-box label {
+    padding-top: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #D9D9D9;
+    cursor: pointer;
+    padding-right: 30px
+
+}
+
+.flex-box input {
+    cursor: pointer;
+}
+
+.img-people {
+    margin: 20px;
+    width: 120px;
+    border-radius: 120px;
+}
+
+.play-button {
+    background: #CD0707;
+    width: 200px;
+    height: 4vh;
+    border-radius: 10px;
+    border: 1px solid #CD0707;
+    color: white;
+    font-size: 30px;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
 }
