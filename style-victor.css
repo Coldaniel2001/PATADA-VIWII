@@ -1,4 +1,9 @@
+body {
+    width: 100%;
+    height: 100%;
+}
+
 .fondo {
-    width: 1149px;
-    height: 608px;
+    width: 1420px;
+    height: 710px;
 }
