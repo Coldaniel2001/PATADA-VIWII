@@ -3,20 +3,52 @@ body {
     height: 710px;
 }
 .fondo {
+    position: relative;
     z-index: -10;
 }
 .up-to-face {
     margin-top: -553px;
-    z-index: -12;
+    position: relative;
+    z-index: -10;
     background-color: red;
 }
 
-.iñaki1 {
-    z-index: 100;
-    margin-bottom: -100px;
+.inaki1 {
+    z-index: 10;
+    margin-bottom: -606px;
+    margin-left: 60px;
+
 }
 
+.inaki2 {
+    z-index: 10;
+    margin-bottom: -359px;
+    margin-left: 35px;
+}
 
+.inaki3 {
+    z-index: 10;
+    margin-bottom: -710px;
+    margin-left: -10px;
+}
+
+.inaki4 {
+    z-index: 10;
+    margin-bottom: -530px;
+    margin-left: 80px;
+}
+
+.inaki5 {
+    z-index: 10;
+    margin-bottom: -378px;
+    margin-left: 200px;
+}
+
+.inaki6 {
+    z-index: 10;
+    margin-bottom: -694px;
+    margin-left: -80px;
+}
 
 
 
