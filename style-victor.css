@@ -1,9 +1,41 @@
 body {
-    width: 100%;
-    height: 100%;
+    width: 1420px;
+    height: 710px;
 }
+
 
 .fondo {
     width: 1420px;
     height: 710px;
+}
+
+.up-to-face3 {
+    margin-left: -1374px;
+    margin-bottom: 160px;
+}
+
+.up-to-face1 {
+   margin-bottom: 417px;
+   margin-left: -4px;
+}
+
+.up-to-face2 {
+   margin-left: 549px;
+   margin-bottom: 406px;
+}
+
+ .up-to-face4 {
+    margin-left: -565px;
+    margin-bottom: 226px;
+
+}
+
+.up-to-face5 {
+   margin-left: -401px;
+   margin-bottom: 40px;
+ }
+
+.up-to-face6 {
+   margin-left: 495px;
+   margin-bottom: 66px;
 }
