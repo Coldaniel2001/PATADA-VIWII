@@ -2,13 +2,31 @@ body {
     width: 1420px;
     height: 710px;
 }
-
+.fondo {
+    z-index: -10;
+}
 .up-to-face {
     margin-top: -553px;
+    z-index: -12;
+    background-color: red;
 }
 
+.iñaki1 {
+    z-index: 100;
+    margin-bottom: -100px;
+}
+
+
+
+
+
+
+
+
+/*////////////////////////DESKTOP///////////////////////*/
+
 .who-face-pattle {
-    background-color: grey;
+    background-color: #3A762B;
     width: 1420px;
     height: 710px;
     padding-top: 250px;
@@ -21,7 +39,7 @@ body {
     border-radius: 20px;
     margin: 0 auto;
     margin-bottom: 30px;
-    border: 2px solid black;
+    border: 2px solid #eb2f06;
 }
 
 .who-box h2{
@@ -49,6 +67,7 @@ body {
 
 .flex-box input {
     cursor: pointer;
+    width: 20px;
 }
 
 .img-people {
