@@ -50,9 +50,77 @@ body {
     margin-left: -80px;
 }
 
+.victor1 {
+    z-index: 10;
+    margin-bottom: -608px;
+    margin-left: -1155px;
+}
 
+.victor2 {
+    z-index: 10;
+    margin-bottom: -360px;
+    margin-left: 50px;
+}
 
+.victor3 {
+    z-index: 10;
+    margin-bottom: -710px;
+    margin-left: 0px;
+}
 
+.victor4 {
+    z-index: 10;
+    margin-bottom: -530px;
+    margin-left: 90px;
+}
+
+.victor5 {
+    z-index: 10;
+    margin-bottom: -378px;
+    margin-left: 210px;
+}
+
+.victor6 {
+    z-index: 10;
+    margin-bottom: -695px;
+    margin-left: -80px;
+}
+
+.wilson1 {
+    z-index: 10;
+    margin-bottom: -607px;
+    margin-left: -1150px;
+}
+
+.wilson2 {
+    z-index: 10;
+    margin-bottom: -360px;
+    margin-left: 30px;
+}
+
+.wilson3 {
+    z-index: 10;
+    margin-bottom: -710px;
+    margin-left: -12px;
+}
+
+.wilson4 {
+    z-index: 10;
+    margin-bottom: -530px;
+    margin-left: 90px;
+}
+
+.wilson5 {
+    z-index: 10;
+    margin-bottom: -379px;
+    margin-left: 195px;
+}
+
+.wilson6 {
+    z-index: 10;
+    margin-bottom: -695px;
+    margin-left: -85px;
+}
 
 
 /*////////////////////////DESKTOP///////////////////////*/
