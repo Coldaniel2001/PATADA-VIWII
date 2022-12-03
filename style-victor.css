@@ -135,7 +135,9 @@ body {
     margin-left: -85px;
 }
 
-
+.playing {
+    display: none;
+}
 /*////////////////////////DESKTOP///////////////////////*/
 
 .who-face-pattle {
