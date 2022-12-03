@@ -6,11 +6,24 @@ body {
     position: relative;
     z-index: -10;
 }
+.currently-playing{
+    margin-bottom: -140px;
+    margin-left: 1190px;
+    background: white;
+    margin-right: 40px;
+    padding-left: 20px;
+    border-radius: 10px;
+    padding-top: 1px;
+    padding-bottom: 8px;
+    background-color: rgb(249, 249, 189);
+    font-size: 13px;
+}
+
 .up-to-face {
     margin-top: -553px;
     position: relative;
-    z-index: -10;
-    background-color: red;
+    z-index: 0;
+
 }
 
 .inaki1 {
@@ -27,7 +40,7 @@ body {
 }
 
 .inaki3 {
-    z-index: 10;
+    z-index: 1;
     margin-bottom: -710px;
     margin-left: -10px;
 }
