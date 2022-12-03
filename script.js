@@ -11,7 +11,6 @@ const inaki = document.querySelector('#inaki');
 const wilson = document.querySelector('#wilson');
 const victor = document.querySelector('#victor');
 const usuario = document.querySelector('#quien-eres');
-const submitOne = document.querySelector('#submitOne');
 
 /*CICLOS FOR*/
 for (let i = 0; i < easyDif.length; i++) {
@@ -24,7 +23,7 @@ for (let i = 0; i < selectWho.length; i++) {
 
 /*EVENTOS*/
 comenzarPartida.addEventListener("click", function_comenzarPartida)
-submitOne.addEventListener("click", function_play);
+
 
 /*FUNCIONES*/
 function function_comenzarPartida () {
@@ -58,6 +57,3 @@ function function_selectWho () {
     }
 }
 
-function function_play () {
-    console.log('victor')
-}
