@@ -4,6 +4,15 @@ body {
     width: 100%;
 }
 /*DESKTOP 1*/
+
+.desktop-1 {
+    width: 100%;
+}
+
+.desktop-1-notShow {
+    display: none;
+}
+
 .patada-viwii-padre {
     width: 60%;
     margin: 0 auto;
@@ -25,6 +34,7 @@ body {
 .comenzar-partida-padre {
     width: 20%;
     margin: 0 auto;
+    cursor: pointer;
 }
 
 .comenzar-partida {
@@ -39,11 +49,17 @@ body {
     margin-top: 70%;
 }
 
-.desktop-1 {
-    display: none;
-}
 
 /*DESKTOP 2*/
+
+.desktop-2 {
+  display: none;  
+}
+
+.desktop-2-Show{
+    display: contents;
+}
+
 .box-padre {
     width: 40%;
     margin: 0 auto;
