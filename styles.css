@@ -121,3 +121,227 @@ input[type = "radio" ] {
 input[type = "radio" ]:checked + label {
     color: green;
 }
+
+/*DESKTOP-3-5*/
+
+.fondo {
+    position: relative;
+    z-index: -1;
+}
+.currently-playing{
+    margin-bottom: -140px;
+    margin-left: 1190px;
+    background: white;
+    margin-right: 40px;
+    padding-left: 20px;
+    border-radius: 10px;
+    padding-top: 1px;
+    padding-bottom: 8px;
+    background-color: rgb(249, 249, 189);
+    font-size: 13px;
+}
+
+.up-to-face {
+    margin-top: -553px;
+    position: relative;
+    z-index: 2;
+}
+
+.inaki1 {
+    z-index: 1;
+    margin-bottom: -606px;
+    margin-left: 60px;
+    position: relative;
+
+}
+
+.inaki2 {
+    z-index: 1;
+    margin-bottom: -359px;
+    margin-left: 35px;
+    position: relative;
+}
+
+.inaki3 {
+    z-index: 1;
+    margin-bottom: -710px;
+    margin-left: -10px;
+    position: relative;
+}
+
+.inaki4 {
+    z-index: 1;
+    margin-bottom: -530px;
+    margin-left: 80px;
+    position: relative;
+}
+
+.inaki5 {
+    z-index: 1;
+    margin-bottom: -378px;
+    margin-left: 200px;
+    position: relative;
+}
+
+.inaki6 {
+    z-index: 1;
+    margin-bottom: -694px;
+    margin-left: -80px;
+    position: relative;
+}
+
+.victor1 {
+    z-index: 1;
+    margin-bottom: -608px;
+    margin-left: -1155px;
+    position: relative;
+}
+
+.victor2 {
+    z-index: 1;
+    margin-bottom: -360px;
+    margin-left: 50px;
+    position: relative;
+}
+
+.victor3 {
+    z-index: 1;
+    margin-bottom: -710px;
+    margin-left: 0px;
+    position: relative;
+}
+
+.victor4 {
+    z-index: 1;
+    margin-bottom: -530px;
+    margin-left: 90px;
+    position: relative;
+}
+
+.victor5 {
+    z-index: 1;
+    margin-bottom: -378px;
+    margin-left: 210px;
+    position: relative;
+}
+
+.victor6 {
+    z-index: 1;
+    margin-bottom: -695px;
+    margin-left: -80px;
+    position: relative;
+}
+
+.wilson1 {
+    z-index: 1;
+    margin-bottom: -607px;
+    margin-left: -1150px;
+    position: relative;
+}
+
+.wilson2 {
+    z-index: 1;
+    margin-bottom: -360px;
+    margin-left: 30px;
+    position: relative;
+}
+
+.wilson3 {
+    z-index: 1;
+    margin-bottom: -710px;
+    margin-left: -12px;
+    position: relative;
+}
+
+.wilson4 {
+    z-index: 1;
+    margin-bottom: -530px;
+    margin-left: 90px;
+    position: relative;
+}
+
+.wilson5 {
+    z-index: 1;
+    margin-bottom: -379px;
+    margin-left: 195px;
+    position: relative;
+}
+
+.wilson6 {
+    z-index: 1;
+    margin-bottom: -695px;
+    margin-left: -85px;
+    position: relative;
+}
+
+.playing {
+    display: none;
+}
+
+.who-face-pattle {
+    display: none;
+}
+
+.who-face-pattle {
+    background-color: #3A762B;
+    width: 1420px;
+    height: 710px;
+    padding-top: 250px;
+}
+
+.who-box {
+    background-color: #A79328;
+    text-align: center;
+    width: 40%;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border: 2px solid #eb2f06;
+}
+
+.who-box h2{
+    color: white;
+    border-bottom: 1px solid rgb(233, 233, 233);
+    padding-bottom: 20px;
+  
+}
+
+.flex-box {
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 40px;
+}
+
+.flex-box label {
+    padding-top: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #D9D9D9;
+    cursor: pointer;
+    padding-right: 30px
+
+}
+
+.flex-box input {
+    cursor: pointer;
+    width: 20px;
+}
+
+.img-people {
+    margin: 20px;
+    width: 120px;
+    border-radius: 120px;
+}
+
+.play-button {
+    background: #CD0707;
+    width: 200px;
+    height: 4vh;
+    border-radius: 10px;
+    border: 1px solid #CD0707;
+    color: white;
+    font-size: 30px;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+}

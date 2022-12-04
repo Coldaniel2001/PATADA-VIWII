@@ -6,7 +6,8 @@ const page2 = document.querySelector(".desktop-2")
 const easyDif = document.querySelectorAll(".easy-dif");
 const usuario = document.querySelector('#quien-eres');
 const play = document.querySelector('.formulario-jugar');
-
+const playing = document.querySelector('.playing');
+const currentUser = document.querySelector('.current-user');
 
 /*EVENTOS*/
 comenzarPartida.addEventListener("click", function_comenzarPartida);
@@ -35,6 +36,19 @@ function function_play(event){
     if(quienEres) {
         localStorage.setItem('username', quienEres.value);
     }
+    if(page2.classList.contains('desktop-2-show')){
+        page2.classList.replace('desktop-2-show', 'desktop-2');
+    }
+    if(playing.classList.contains('playing')){
+        playing.classList.replace('playing', 'playing-show');
+        currentUser.innerHTML = localStorage.getItem('username');
+        if(localStorage.getItem('dificulty') == 'easy') {
+            easyMode()
+        }
+        if(localStorage.getItem('dificulty') == 'dificult') {
+            hardMode()
+        }
+    }
 }
 
 
@@ -49,3 +63,10 @@ function function_comenzarPartida () {
 }
 
 
+function easyMode() {
+    console.log("easy");
+}
+
+function hardMode() {
+    console.log("hard");
+}
