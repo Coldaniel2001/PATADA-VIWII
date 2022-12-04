@@ -8,7 +8,6 @@ const usuario = document.querySelector('#quien-eres');
 const play = document.querySelector('.formulario-jugar');
 
 
-
 /*EVENTOS*/
 comenzarPartida.addEventListener("click", function_comenzarPartida);
 play.addEventListener("submit", function_play);
