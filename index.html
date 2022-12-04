@@ -24,28 +24,29 @@
         </section>
 
         <section class="desktop-2">
-            <form>
+            <form class="formulario-jugar">
                 <div class="box-padre">
                     <div class="box">
                         <div class="quien-eres">
                             <label class="label-not" for="quien-eres"><h3>¿QUIÉN ERES?</h3></label>
-                            <input type="text" id="quien-eres" name="quien-eres">
+                            <input type="text" id="quien-eres" name="quien-eres" required>
                         </div>
                         <div class="dificultad">
                             <h3>DIFICULTAD</h3>
-                            <input class="easy-dif" type="radio" id="easy" name="text" value="text">
+                            <input class="easy-dif" type="radio" id="facil" name="text" value="text" required>
                             <label for="facil">Fácil</label>
-                            <input class="easy-dif" type="radio" id="dificult" name="text" value="text">
+                            <input class="easy-dif" type="radio" id="dificil" name="text" value="text" required> 
                             <label for="dificil">Difícil</label>
                         </div>
                         <div class="patear-cara">
                             <h3>¿A QUIÉN TE GUSTARÍA PATEAR?</h3>
-                            <input class="select-who" type="radio" id="inaki" name="text2" value="text">
+                            <input class="select-who" type="radio" id="inaki" name="text2" value="text" required>
                             <label for="inaki">Iñaki</label>
-                            <input class="select-who" type="radio" id="wilson" name="text2" value="text">
+                            <input class="select-who" type="radio" id="wilson" name="text2" value="text" required>
                             <label for="wilson">Wilson</label>
-                            <input class="select-who" type="radio" id="victor" name="text2" value="text">
+                            <input class="select-who" type="radio" id="victor" name="text2" value="text" required>
                             <label for="victor">Victor</label>
+                            
                             <div>
                                 <img class="fotos" src="assets/inaki.png" alt="Iñaki">
                                 <img class="fotos" src="assets/wilson.png" alt="Wilson">
@@ -55,7 +56,7 @@
                     </div>
                 </div>
                 <div class="submit-div">
-                    <input class="submit-1" id="submitOne" type="submit" value="Jugar">
+                    <button class="submit-1" id="submitOne" type="submit" >Jugar</button>
                 </div>
             </form>
         </section>
