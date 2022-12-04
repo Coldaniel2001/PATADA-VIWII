@@ -6,7 +6,7 @@ body {
 }
 .fondo {
     position: relative;
-    z-index: -10;
+    z-index: -1;
 }
 .currently-playing{
     margin-bottom: -140px;
@@ -24,116 +24,134 @@ body {
 .up-to-face {
     margin-top: -553px;
     position: relative;
-
+    z-index: 2;
 }
 
 .inaki1 {
-    z-index: 10;
+    z-index: 1;
     margin-bottom: -606px;
     margin-left: 60px;
+    position: relative;
 
 }
 
 .inaki2 {
-    z-index: 10;
+    z-index: 1;
     margin-bottom: -359px;
     margin-left: 35px;
+    position: relative;
 }
 
 .inaki3 {
     z-index: 1;
     margin-bottom: -710px;
     margin-left: -10px;
+    position: relative;
 }
 
 .inaki4 {
-    z-index: 10;
+    z-index: 1;
     margin-bottom: -530px;
     margin-left: 80px;
+    position: relative;
 }
 
 .inaki5 {
-    z-index: 10;
+    z-index: 1;
     margin-bottom: -378px;
     margin-left: 200px;
+    position: relative;
 }
 
 .inaki6 {
-    z-index: 10;
+    z-index: 1;
     margin-bottom: -694px;
     margin-left: -80px;
+    position: relative;
 }
 
 .victor1 {
-    z-index: 10;
+    z-index: 1;
     margin-bottom: -608px;
     margin-left: -1155px;
+    position: relative;
 }
 
 .victor2 {
-    z-index: 10;
+    z-index: 1;
     margin-bottom: -360px;
     margin-left: 50px;
+    position: relative;
 }
 
 .victor3 {
-    z-index: 10;
+    z-index: 1;
     margin-bottom: -710px;
     margin-left: 0px;
+    position: relative;
 }
 
 .victor4 {
-    z-index: 10;
+    z-index: 1;
     margin-bottom: -530px;
     margin-left: 90px;
+    position: relative;
 }
 
 .victor5 {
-    z-index: 10;
+    z-index: 1;
     margin-bottom: -378px;
     margin-left: 210px;
+    position: relative;
 }
 
 .victor6 {
-    z-index: 10;
+    z-index: 1;
     margin-bottom: -695px;
     margin-left: -80px;
+    position: relative;
 }
 
 .wilson1 {
-    z-index: 10;
+    z-index: 1;
     margin-bottom: -607px;
     margin-left: -1150px;
+    position: relative;
 }
 
 .wilson2 {
-    z-index: 10;
+    z-index: 1;
     margin-bottom: -360px;
     margin-left: 30px;
+    position: relative;
 }
 
 .wilson3 {
-    z-index: 10;
+    z-index: 1;
     margin-bottom: -710px;
     margin-left: -12px;
+    position: relative;
 }
 
 .wilson4 {
-    z-index: 10;
+    z-index: 1;
     margin-bottom: -530px;
     margin-left: 90px;
+    position: relative;
 }
 
 .wilson5 {
-    z-index: 10;
+    z-index: 1;
     margin-bottom: -379px;
     margin-left: 195px;
+    position: relative;
 }
 
 .wilson6 {
-    z-index: 10;
+    z-index: 1;
     margin-bottom: -695px;
     margin-left: -85px;
+    position: relative;
 }
 
 .playing {
