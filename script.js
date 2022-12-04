@@ -32,6 +32,9 @@ function function_play(event){
     if(victor.checked) {
         localStorage.setItem('character', 'Victor');
     }
+    if(quienEres) {
+        localStorage.setItem('username', quienEres.value);
+    }
 }
 
 
@@ -44,6 +47,5 @@ function function_comenzarPartida () {
         page2.classList.replace("desktop-2", "desktop-2-show");
     }
 }
-
 
 
