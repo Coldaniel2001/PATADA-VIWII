@@ -123,11 +123,12 @@ function easyMode() {
 
     if(numeroAleatorio == 1){
         if(localStorage.getItem("character") == "Inaki"){
-            inaki1.style.marginBottom  = "-450px";
+            inaki1.style.marginBottom  = "-400px";
+            inaki1.style.zIndex = 3;
             inaki1.style.transition  = "10s";
             
         } else if(localStorage.getItem("character") == "Wilson"){
-            wilson1.style.marginBottom  = "-250px";
+            wilson1.style.marginBottom  = "-450px";
         }else {
             victor1.style.marginBottom  = "-450px";
         }
