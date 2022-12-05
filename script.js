@@ -8,6 +8,10 @@ const usuario = document.querySelector('#quien-eres');
 const play = document.querySelector('.formulario-jugar');
 const playing = document.querySelector('.playing');
 const currentUser = document.querySelector('.current-user');
+const countdown = document.querySelector(".countdown")
+const getReady = document.querySelector(".get-ready")
+
+
 
 /*EVENTOS*/
 comenzarPartida.addEventListener("click", function_comenzarPartida);
@@ -49,7 +53,24 @@ function function_play(event){
             hardMode();
         }
     }
+    
+    let contador = 5
+    const message = setInterval(()=>{  
+        console.log(contador);
+        contador--;
+        if (contador == -1){
+            if(getReady.classList.contains("get-ready"))
+            getReady.classList.replace("get-ready", "get-ready-notShow")
+            clearInterval(message);
+        }
+
+    }, 1000);
+    for(i=0; countdown.length; i++){
+        countdown[i].innerText += contador;
+    }
+
 }
+
 
 
 function function_comenzarPartida () {

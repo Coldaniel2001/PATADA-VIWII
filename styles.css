@@ -1,7 +1,9 @@
 body {
+    height: 710px;
+    width: 1420px;
+    margin: 0 auto;
     background-color: #39762A;
-    height: 100%;
-    width: 100%;
+
 }
 /*DESKTOP 1*/
 
@@ -123,6 +125,22 @@ input[type = "radio" ]:checked + label {
 }
 
 /*DESKTOP-3-5*/
+
+.get-ready{
+    position: relative;
+    z-index: 4;
+    background: white;
+    margin-top: -600px;
+    margin-left: 540px;
+    padding: 30px;
+    width: 340px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.get-ready-notShow{
+    display: none;
+}
 
 .fondo {
     position: relative;
