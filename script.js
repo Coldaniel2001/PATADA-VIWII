@@ -103,9 +103,9 @@ function easyMode() {
             inaki1.style.transition  = "10s";
             
         } else if(localStorage.getItem("character") == "Wilson"){
-            wilson1.style.marginBottom  = "700px";
+            wilson1.style.marginBottom  = "-250px";
         }else {
-            victor1.style.marginBottom  = "700px";
+            victor1.style.marginBottom  = "-450px";
         }
     } else if(numeroAleatorio == 2){
         if(localStorage.getItem("character") == "Inaki"){
@@ -154,7 +154,7 @@ function easyMode() {
 /*si ganas*/
 
 function ganar_partida(){
-    alert("Genial has ganado la partida");
+    alert("ganaste");
 }
 
 
