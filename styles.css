@@ -2,7 +2,9 @@ body {
     height: 710px;
     width: 1420px;
     margin: 0 auto;
-    background-color: #39762A;
+    background-color: #3A762B;
+
+
 
 }
 /*DESKTOP 1*/
@@ -142,6 +144,53 @@ input[type = "radio" ]:checked + label {
     display: none;
 }
 
+/*green boxes*/
+
+.box1 {
+    margin-bottom: -580px;
+    margin-left: 49px;
+    position: relative;
+    z-index: 2;
+}
+
+.box2 {
+    margin-bottom: -331px;
+    margin-left: -4px;
+    position: relative;
+    z-index: 2;
+}
+
+.box3 {
+    margin-bottom: -684px;
+    margin-left: -43px;
+    position: relative;
+    z-index: 2;
+}
+
+.box4 {
+    margin-bottom: -503px;
+    margin-left: 55px;
+    position: relative;
+    z-index: 2;
+}
+
+.box5 {
+    margin-bottom: -352px;
+    margin-left: 165px;
+    position: relative;
+    z-index: 2;
+}
+
+.box6 {
+    margin-bottom: -666px;
+    margin-left: -116px;
+    position: relative;
+    z-index: 2;
+}
+
+
+
+
 .fondo {
     position: relative;
     z-index: -1;
@@ -168,7 +217,7 @@ input[type = "radio" ]:checked + label {
 
 
 .inaki1 {
-    z-index: 1;
+    z-index: 0;
     margin-bottom: -606px;
     margin-left: 60px;
     position: relative;
