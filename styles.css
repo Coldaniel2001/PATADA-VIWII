@@ -363,3 +363,8 @@ input[type = "radio" ]:checked + label {
     display: block;
     cursor: pointer;
 }
+
+.countdown {
+    font-size: 40px;
+    font-weight: bold;
+}

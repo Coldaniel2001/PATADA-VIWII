@@ -54,20 +54,23 @@ function function_play(event){
         }
     }
     
-    let contador = 5
+    /*COUNTDOWN 5 SEGUNDOS*/
+    let contador = 6
     const message = setInterval(()=>{  
         console.log(contador);
         contador--;
-        if (contador == -1){
+        if (contador == 0){
             if(getReady.classList.contains("get-ready"))
+            countdown.innerHTML = 'GO!';
+        }else if (contador == -1) {
             getReady.classList.replace("get-ready", "get-ready-notShow")
             clearInterval(message);
         }
-
+        else {
+            countdown.innerHTML = contador;
+        }
     }, 1000);
-    for(i=0; countdown.length; i++){
-        countdown[i].innerText += contador;
-    }
+    
 
 }
 
