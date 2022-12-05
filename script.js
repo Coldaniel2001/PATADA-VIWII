@@ -122,11 +122,15 @@ function easyMode() {
     let wilson6 = document.querySelector(".wilson6");
 
     /*Numero aleatorio*/
-    let numeroAleatorio = Math.floor((Math.random() * (6)) + 1);
+    let numeroAleatorio = 1;
     if(numeroAleatorio == 1){
         if(localStorage.getItem("character") == "Inaki"){
-            inaki1.style.marginBottom  = "-400px";
-            inaki1.style.zIndex = 3;
+            
+            setTimeout(() => {
+                inaki1.style.marginBottom  = "-400px";
+                inaki1.style.zIndex = 3;
+            }, 0);
+
         } else if(localStorage.getItem("character") == "Wilson"){
             wilson1.style.marginBottom  = "-400px";
             wilson1.style.zIndex = 3;
