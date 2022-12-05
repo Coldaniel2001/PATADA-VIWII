@@ -43,10 +43,10 @@ function function_play(event){
         playing.classList.replace('playing', 'playing-show');
         currentUser.innerHTML = localStorage.getItem('username');
         if(localStorage.getItem('dificulty') == 'easy') {
-            easyMode()
+            easyMode();
         }
         if(localStorage.getItem('dificulty') == 'dificult') {
-            hardMode()
+            hardMode();
         }
     }
 }
@@ -65,7 +65,9 @@ function function_comenzarPartida () {
 
 function easyMode() {
     console.log("easy");
+    
 }
+
 
 function hardMode() {
     console.log("hard");
