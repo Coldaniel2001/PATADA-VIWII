@@ -3,6 +3,7 @@ body {
     width: 1420px;
     margin: 0 auto;
     background-color: #3A762B;
+    
 
 
 
@@ -267,6 +268,8 @@ input[type = "radio" ]:checked + label {
     transition: 1s;
 }
 
+
+
 .victor2 {
     z-index: 1;
     margin-bottom: -360px;
@@ -345,8 +348,16 @@ input[type = "radio" ]:checked + label {
     position: relative;
 }
 
+.img-ease:hover {
+    cursor: url("assets/cursor.png"), progress;
+}
+
 .playing {
     display: none;
+}
+
+.playing-show {
+    cursor: url("assets/curso_45.png"), progress;
 }
 
 .who-face-pattle {
