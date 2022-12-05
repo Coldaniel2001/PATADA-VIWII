@@ -9,6 +9,14 @@ const play = document.querySelector('.formulario-jugar');
 const playing = document.querySelector('.playing');
 const currentUser = document.querySelector('.current-user');
 
+/*///////////////////////MODO FACIL///////////////*/
+
+ /* coger todas las imagenes */
+ let imgEase = document.querySelectorAll(".img-ease");
+ for(let i = 0; i < imgEase.length; i++ ){
+     imgEase[i].addEventListener("click", ganar_partida);
+ }
+
 /*EVENTOS*/
 comenzarPartida.addEventListener("click", function_comenzarPartida);
 play.addEventListener("submit", function_play);
@@ -33,6 +41,7 @@ function function_play(event){
     if(victor.checked) {
         localStorage.setItem('character', 'Victor');
     }
+
     if(quienEres) {
         localStorage.setItem('username', quienEres.value);
     }
@@ -64,11 +73,94 @@ function function_comenzarPartida () {
 
 
 function easyMode() {
-    console.log("easy");
-    
+    /*posiciones caras*/
+    let inaki1 = document.querySelector(".inaki1");
+    let inaki2 = document.querySelector(".inaki2");
+    let inaki3 = document.querySelector(".inaki3");
+    let inaki4 = document.querySelector(".inaki4");
+    let inaki5 = document.querySelector(".inaki5");
+    let inaki6 = document.querySelector(".inaki6");
+    let victor1 = document.querySelector(".victor1");
+    let victor2 = document.querySelector(".victor2");
+    let victor3 = document.querySelector(".victor3");
+    let victor4 = document.querySelector(".victor4");
+    let victor5 = document.querySelector(".victor5");
+    let victor6 = document.querySelector(".victor6");
+    let wilson1 = document.querySelector(".wilson1");
+    let wilson2 = document.querySelector(".wilson2");
+    let wilson3 = document.querySelector(".wilson3");
+    let wilson4 = document.querySelector(".wilson4");
+    let wilson5 = document.querySelector(".wilson5");
+    let wilson6 = document.querySelector(".wilson6");
+
+    /*Numero aleatorio*/
+    let numeroAleatorio = 1;
+    console.log(numeroAleatorio);
+
+    if(numeroAleatorio == 1){
+        if(localStorage.getItem("character") == "Inaki"){
+            inaki1.style.marginBottom  = "-450px";
+            inaki1.style.transition  = "10s";
+            
+        } else if(localStorage.getItem("character") == "Wilson"){
+            wilson1.style.marginBottom  = "700px";
+        }else {
+            victor1.style.marginBottom  = "700px";
+        }
+    } else if(numeroAleatorio == 2){
+        if(localStorage.getItem("character") == "Inaki"){
+
+        } else if(localStorage.getItem("character") == "Wilson"){
+
+        }else {
+            
+        }
+    }else if(numeroAleatorio == 3){
+        if(localStorage.getItem("character") == "Inaki"){
+
+        } else if(localStorage.getItem("character") == "Wilson"){
+
+        }else {
+            
+        }
+    }else if(numeroAleatorio == 4){
+        if(localStorage.getItem("character") == "Inaki"){
+
+        } else if(localStorage.getItem("character") == "Wilson"){
+
+        }else {
+            
+        }
+    }else if(numeroAleatorio == 5){
+        if(localStorage.getItem("character") == "Inaki"){
+
+        } else if(localStorage.getItem("character") == "Wilson"){
+
+        }else {
+            
+        }
+    }else {
+        if(localStorage.getItem("character") == "Inaki"){
+
+        } else if(localStorage.getItem("character") == "Wilson"){
+
+        }else {
+            
+        }
+    }
+
 }
+
+/*si ganas*/
+
+function ganar_partida(){
+    alert("Genial has ganado la partida");
+}
+
 
 
 function hardMode() {
     console.log("hard");
 }
+
+
