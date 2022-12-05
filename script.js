@@ -7,6 +7,7 @@ const easyDif = document.querySelectorAll(".easy-dif");
 const usuario = document.querySelector('#quien-eres');
 const play = document.querySelector('.formulario-jugar');
 const playing = document.querySelector('.playing');
+const winner = document.querySelector('.winner');
 const currentUser = document.querySelector('.current-user');
 const countdown = document.querySelector(".countdown")
 const getReady = document.querySelector(".get-ready")
@@ -195,7 +196,12 @@ function easyMode() {
 /*si ganas*/
 
 function ganar_partida(){
-    alert("ganaste");
+    if(playing.classList.contains('playing-show')){
+        playing.classList.replace('playing-show', 'playing');
+    }
+    if(winner.classList.contains('winner')){
+        winner.classList.replace('winner', 'winner-show');
+    }
 }
 
 
