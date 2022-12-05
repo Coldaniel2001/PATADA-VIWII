@@ -125,10 +125,10 @@ function easyMode() {
     let tiempoJuego = 0;
     
     let time = setInterval(() => {
-        tiempoJuego += 0.1;
-        console.log(tiempoJuego);
-        localStorage.setItem("tiempo de juego", tiempoJuego );
-    }, 1000);
+        tiempoJuego += 0.01;
+        console.log(tiempoJuego.toFixed(3));
+        localStorage.setItem("tiempo de juego", tiempoJuego.toFixed(3) );
+    }, 10);
 
     /*Numero aleatorio*/
     let numeroAleatorio = Math.floor((Math.random() * (6)) + 1);
@@ -240,7 +240,7 @@ function ganar_partida(){
         winner.classList.replace('winner', 'winner-show');
     }
     caraSeleccionada.innerHTML = `"${localStorage.getItem('character')}"`;
-    recordSegundos.innerHTML = localStorage.getItem("tiempo de juego");
+    recordSegundos.innerHTML = `${localStorage.getItem("tiempo de juego")} segundos`;
 }
 
 
