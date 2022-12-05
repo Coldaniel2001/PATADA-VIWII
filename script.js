@@ -11,8 +11,8 @@ const winner = document.querySelector('.winner');
 const currentUser = document.querySelector('.current-user');
 const countdown = document.querySelector(".countdown")
 const getReady = document.querySelector(".get-ready")
-
-
+const caraSeleccionada = document.querySelector(".cara-seleccionada");
+const recordSegundos = document.querySelector(".record-segundos");
 
 /*///////////////////////MODO FACIL///////////////*/
 
@@ -60,7 +60,7 @@ function function_play(event){
     }
     
     /*COUNTDOWN 5 SEGUNDOS*/
-    let contador = 2
+    let contador = 0;
     const message = setInterval(()=>{  
         console.log(contador);
         contador--;
@@ -121,8 +121,17 @@ function easyMode() {
     let wilson5 = document.querySelector(".wilson5");
     let wilson6 = document.querySelector(".wilson6");
 
+    /*TIEMPO DE JUEGO */
+    let tiempoJuego = 0;
+    
+    let time = setInterval(() => {
+        tiempoJuego += 0.1;
+        console.log(tiempoJuego);
+        localStorage.setItem("tiempo de juego", tiempoJuego );
+    }, 1000);
+
     /*Numero aleatorio*/
-    let numeroAleatorio = 1;
+    let numeroAleatorio = Math.floor((Math.random() * (6)) + 1);
     if(numeroAleatorio == 1){
         if(localStorage.getItem("character") == "Inaki"){
             
@@ -144,58 +153,78 @@ function easyMode() {
         }
     } else if(numeroAleatorio == 2){
         if(localStorage.getItem("character") == "Inaki"){
-            inaki2.style.marginBottom  = "-150px";
-            inaki2.style.zIndex = 3;
+            setTimeout(() => {
+                inaki2.style.marginBottom  = "-180px";
+            }, 0);
         } else if(localStorage.getItem("character") == "Wilson"){
-            wilson2.style.marginBottom  = "-150px";
-            wilson2.style.zIndex = 3;
+            setTimeout(() => {
+                wilson2.style.marginBottom  = "-180px";
+            }, 0)
+                
         }else {
-            victor2.style.marginBottom  = "-150px";
-            victor2.style.zIndex = 3;
+            setTimeout(() => {
+                victor2.style.marginBottom  = "-180px";
+            }, 0);
         }
     }else if(numeroAleatorio == 3){
         if(localStorage.getItem("character") == "Inaki"){
-            inaki3.style.marginBottom  = "-500px";
-            inaki3.style.zIndex = 3;
+            setTimeout(() => {
+                inaki3.style.marginBottom  = "-540px";
+            }, 0);
         } else if(localStorage.getItem("character") == "Wilson"){
-            wilson3.style.marginBottom  = "-500px";
-            wilson3.style.zIndex = 3;
+            setTimeout(() => {
+                wilson3.style.marginBottom  = "-540px";
+            }, 0)
+                
         }else {
-            victor3.style.marginBottom  = "-500px";
-            victor3.style.zIndex = 3;
+            setTimeout(() => {
+                victor3.style.marginBottom  = "-540px";
+            }, 0);
         }
     }else if(numeroAleatorio == 4){
         if(localStorage.getItem("character") == "Inaki"){
-            inaki4.style.marginBottom  = "-325px";
-            inaki4.style.zIndex = 3;
+            setTimeout(() => {
+                inaki4.style.marginBottom  = "-360px";
+            }, 0);
         } else if(localStorage.getItem("character") == "Wilson"){
-            wilson4.style.marginBottom  = "-325px";
-            wilson4.style.zIndex = 3;
+            setTimeout(() => {
+                wilson4.style.marginBottom  = "-360px";
+            }, 0)
+                
         }else {
-            victor4.style.marginBottom  = "-325px";
-            victor4.style.zIndex = 3;
+            setTimeout(() => {
+                victor4.style.marginBottom  = "-360px";
+            }, 0);
         }
     }else if(numeroAleatorio == 5){
         if(localStorage.getItem("character") == "Inaki"){
-            inaki5.style.marginBottom  = "-175px";
-            inaki5.style.zIndex = 3;
+            setTimeout(() => {
+                inaki5.style.marginBottom  = "-215px";
+            }, 0);
         } else if(localStorage.getItem("character") == "Wilson"){
-            wilson5.style.marginBottom  = "-175px";
-            wilson5.style.zIndex = 3;
+            setTimeout(() => {
+                wilson5.style.marginBottom  = "-215px";
+            }, 0)
+                
         }else {
-            victor5.style.marginBottom  = "-175px";
-            victor5.style.zIndex = 3;
+            setTimeout(() => {
+                victor5.style.marginBottom  = "-215px";
+            }, 0);
         }
     }else {
         if(localStorage.getItem("character") == "Inaki"){
-            inaki6.style.marginBottom  = "-495px";
-            inaki6.style.zIndex = 3;
+            setTimeout(() => {
+                inaki6.style.marginBottom  = "-545px";
+            }, 0);
         } else if(localStorage.getItem("character") == "Wilson"){
-            wilson6.style.marginBottom  = "-495px";
-            wilson6.style.zIndex = 3;
+            setTimeout(() => {
+                wilson6.style.marginBottom  = "-545px";
+            }, 0)
+                
         }else {
-            victor6.style.marginBottom  = "-495px";
-            victor6.style.zIndex = 3;
+            setTimeout(() => {
+                victor6.style.marginBottom  = "-545px";
+            }, 0);
         }
     }
 }
@@ -210,6 +239,8 @@ function ganar_partida(){
     if(winner.classList.contains('winner')){
         winner.classList.replace('winner', 'winner-show');
     }
+    caraSeleccionada.innerHTML = `"${localStorage.getItem('character')}"`;
+    recordSegundos.innerHTML = localStorage.getItem("tiempo de juego");
 }
 
 

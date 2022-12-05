@@ -230,6 +230,7 @@ input[type = "radio" ]:checked + label {
     margin-bottom: -359px;
     margin-left: 35px;
     position: relative;
+    transition: 1s;
 }
 
 .inaki3 {
@@ -237,6 +238,7 @@ input[type = "radio" ]:checked + label {
     margin-bottom: -710px;
     margin-left: -10px;
     position: relative;
+    transition: 1s;
 }
 
 .inaki4 {
@@ -244,6 +246,7 @@ input[type = "radio" ]:checked + label {
     margin-bottom: -530px;
     margin-left: 80px;
     position: relative;
+    transition: 1s;
 }
 
 .inaki5 {
@@ -251,6 +254,7 @@ input[type = "radio" ]:checked + label {
     margin-bottom: -378px;
     margin-left: 200px;
     position: relative;
+    transition: 1s;
 }
 
 .inaki6 {
@@ -258,6 +262,7 @@ input[type = "radio" ]:checked + label {
     margin-bottom: -694px;
     margin-left: -80px;
     position: relative;
+    transition: 1s;
 }
 
 .victor1 {
@@ -275,6 +280,7 @@ input[type = "radio" ]:checked + label {
     margin-bottom: -360px;
     margin-left: 50px;
     position: relative;
+    transition: 1s;
 }
 
 .victor3 {
@@ -282,6 +288,7 @@ input[type = "radio" ]:checked + label {
     margin-bottom: -710px;
     margin-left: 0px;
     position: relative;
+    transition: 1s;
 }
 
 .victor4 {
@@ -289,6 +296,7 @@ input[type = "radio" ]:checked + label {
     margin-bottom: -530px;
     margin-left: 90px;
     position: relative;
+    transition: 1s;
 }
 
 .victor5 {
@@ -296,6 +304,7 @@ input[type = "radio" ]:checked + label {
     margin-bottom: -378px;
     margin-left: 210px;
     position: relative;
+    transition: 1s;
 }
 
 .victor6 {
@@ -303,12 +312,13 @@ input[type = "radio" ]:checked + label {
     margin-bottom: -695px;
     margin-left: -80px;
     position: relative;
+    transition: 1s;
 }
 
 .wilson1 {
     z-index: 1;
     margin-bottom: -607px;
-    margin-left: -1150px;
+    margin-left: -1130px;
     position: relative;
     transition: 1s;
 }
@@ -316,15 +326,17 @@ input[type = "radio" ]:checked + label {
 .wilson2 {
     z-index: 1;
     margin-bottom: -360px;
-    margin-left: 30px;
+    margin-left: 45px;
     position: relative;
+    transition: 1s;
 }
 
 .wilson3 {
     z-index: 1;
     margin-bottom: -710px;
-    margin-left: -12px;
+    margin-left: -18px;
     position: relative;
+    transition: 1s;
 }
 
 .wilson4 {
@@ -332,6 +344,7 @@ input[type = "radio" ]:checked + label {
     margin-bottom: -530px;
     margin-left: 90px;
     position: relative;
+    transition: 1s;
 }
 
 .wilson5 {
@@ -339,13 +352,15 @@ input[type = "radio" ]:checked + label {
     margin-bottom: -379px;
     margin-left: 195px;
     position: relative;
+    transition: 1s;
 }
 
 .wilson6 {
     z-index: 1;
     margin-bottom: -695px;
-    margin-left: -85px;
+    margin-left: -115px;
     position: relative;
+    transition: 1s;
 }
 
 .img-ease:hover {
@@ -618,6 +633,7 @@ input[type = "radio" ]:checked + label {
     width: 45%;
     padding: 3%;
     border-radius: 10px;
+    margin-bottom: 15px;
 }
 .wrong_face_winner h2 {
     text-align: center;
