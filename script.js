@@ -60,7 +60,7 @@ function function_play(event){
     }
     
     /*COUNTDOWN 5 SEGUNDOS*/
-    let contador = 6
+    let contador = 2
     const message = setInterval(()=>{  
         console.log(contador);
         contador--;
@@ -127,16 +127,20 @@ function easyMode() {
         if(localStorage.getItem("character") == "Inaki"){
             
             setTimeout(() => {
-                inaki1.style.marginBottom  = "-400px";
-                inaki1.style.zIndex = 3;
+                inaki1.style.marginBottom  = "-440px";
             }, 0);
 
         } else if(localStorage.getItem("character") == "Wilson"){
-            wilson1.style.marginBottom  = "-400px";
-            wilson1.style.zIndex = 3;
+            
+            setTimeout(() => {
+                wilson1.style.marginBottom  = "-440px";
+            }, 0);
+           
         }else {
-            victor1.style.marginBottom  = "-400px";
-            victor1.style.zIndex = 3;
+            
+            setTimeout(() => {
+                victor1.style.marginBottom  = "-440px";
+            }, 0);
         }
     } else if(numeroAleatorio == 2){
         if(localStorage.getItem("character") == "Inaki"){
