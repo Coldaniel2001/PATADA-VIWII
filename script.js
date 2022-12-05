@@ -55,12 +55,7 @@ function function_play(event){
     if(playing.classList.contains('playing')){
         playing.classList.replace('playing', 'playing-show');
         currentUser.innerHTML = localStorage.getItem('username');
-        if(localStorage.getItem('dificulty') == 'easy') {
-            easyMode();
-        }
-        if(localStorage.getItem('dificulty') == 'dificult') {
-            hardMode();
-        }
+        
     }
     
     /*COUNTDOWN 5 SEGUNDOS*/
@@ -69,11 +64,19 @@ function function_play(event){
         console.log(contador);
         contador--;
         if (contador == 0){
-            if(getReady.classList.contains("get-ready"))
-            countdown.innerHTML = 'GO!';
+            if(getReady.classList.contains("get-ready")){
+                countdown.innerHTML = 'GO!';
+            }         
         }else if (contador == -1) {
             getReady.classList.replace("get-ready", "get-ready-notShow")
             clearInterval(message);
+            if(localStorage.getItem('dificulty') == 'easy') {
+                easyMode();
+            }
+            if(localStorage.getItem('dificulty') == 'dificult') {
+                hardMode();
+            }
+
         }
         else {
             countdown.innerHTML = contador;
@@ -118,63 +121,76 @@ function easyMode() {
     let wilson6 = document.querySelector(".wilson6");
 
     /*Numero aleatorio*/
-    let numeroAleatorio = 1;
-    console.log(numeroAleatorio);
-
+    let numeroAleatorio = Math.floor((Math.random() * (6)) + 1);
     if(numeroAleatorio == 1){
         if(localStorage.getItem("character") == "Inaki"){
             inaki1.style.marginBottom  = "-400px";
             inaki1.style.zIndex = 3;
-            inaki1.style.transition  = "10s";
-            
         } else if(localStorage.getItem("character") == "Wilson"){
-            wilson1.style.marginBottom  = "-450px";
+            wilson1.style.marginBottom  = "-400px";
+            wilson1.style.zIndex = 3;
         }else {
-            victor1.style.marginBottom  = "-450px";
+            victor1.style.marginBottom  = "-400px";
+            victor1.style.zIndex = 3;
         }
     } else if(numeroAleatorio == 2){
         if(localStorage.getItem("character") == "Inaki"){
-
+            inaki2.style.marginBottom  = "-150px";
+            inaki2.style.zIndex = 3;
         } else if(localStorage.getItem("character") == "Wilson"){
-
+            wilson2.style.marginBottom  = "-150px";
+            wilson2.style.zIndex = 3;
         }else {
-            
+            victor2.style.marginBottom  = "-150px";
+            victor2.style.zIndex = 3;
         }
     }else if(numeroAleatorio == 3){
         if(localStorage.getItem("character") == "Inaki"){
-
+            inaki3.style.marginBottom  = "-500px";
+            inaki3.style.zIndex = 3;
         } else if(localStorage.getItem("character") == "Wilson"){
-
+            wilson3.style.marginBottom  = "-500px";
+            wilson3.style.zIndex = 3;
         }else {
-            
+            victor3.style.marginBottom  = "-500px";
+            victor3.style.zIndex = 3;
         }
     }else if(numeroAleatorio == 4){
         if(localStorage.getItem("character") == "Inaki"){
-
+            inaki4.style.marginBottom  = "-325px";
+            inaki4.style.zIndex = 3;
         } else if(localStorage.getItem("character") == "Wilson"){
-
+            wilson4.style.marginBottom  = "-325px";
+            wilson4.style.zIndex = 3;
         }else {
-            
+            victor4.style.marginBottom  = "-325px";
+            victor4.style.zIndex = 3;
         }
     }else if(numeroAleatorio == 5){
         if(localStorage.getItem("character") == "Inaki"){
-
+            inaki5.style.marginBottom  = "-175px";
+            inaki5.style.zIndex = 3;
         } else if(localStorage.getItem("character") == "Wilson"){
-
+            wilson5.style.marginBottom  = "-175px";
+            wilson5.style.zIndex = 3;
         }else {
-            
+            victor5.style.marginBottom  = "-175px";
+            victor5.style.zIndex = 3;
         }
     }else {
         if(localStorage.getItem("character") == "Inaki"){
-
+            inaki6.style.marginBottom  = "-495px";
+            inaki6.style.zIndex = 3;
         } else if(localStorage.getItem("character") == "Wilson"){
-
+            wilson6.style.marginBottom  = "-495px";
+            wilson6.style.zIndex = 3;
         }else {
-            
+            victor6.style.marginBottom  = "-495px";
+            victor6.style.zIndex = 3;
         }
     }
-
 }
+    
 
 /*si ganas*/
 
