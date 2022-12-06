@@ -58,7 +58,7 @@ function function_play(event){
     }
     
     /*COUNTDOWN 5 SEGUNDOS*/
-    let contador = 0;
+    let contador = 6;
     const message = setInterval(()=>{  
         console.log(contador);
         contador--;
