@@ -1,3 +1,5 @@
+
+
 body {
     height: 710px;
     width: 1420px;
@@ -645,4 +647,11 @@ input[type = "radio" ]:checked + label {
     color: #615101;
     font-size: 30px;
    
+}
+
+.record-segundos {
+    font-size: 30px;
+    color: #CD0707;
+    font-weight: bold;
+
 }

@@ -17,10 +17,7 @@ const recordSegundos = document.querySelector(".record-segundos");
 /*///////////////////////MODO FACIL///////////////*/
 
  /* coger todas las imagenes */
- let imgEase = document.querySelectorAll(".img-ease");
- for(let i = 0; i < imgEase.length; i++ ){
-     imgEase[i].addEventListener("click", ganar_partida);
- }
+ 
 
 /*EVENTOS*/
 comenzarPartida.addEventListener("click", function_comenzarPartida);
@@ -101,6 +98,11 @@ function function_comenzarPartida () {
 
 
 function easyMode() {
+
+    let imgEase = document.querySelectorAll(".img-ease");
+    for(let i = 0; i < imgEase.length; i++ ){
+     imgEase[i].addEventListener("click", ganar_partida);
+    }
     /*posiciones caras*/
     let inaki1 = document.querySelector(".inaki1");
     let inaki2 = document.querySelector(".inaki2");
@@ -138,6 +140,10 @@ function easyMode() {
             setTimeout(() => {
                 inaki1.style.marginBottom  = "-440px";
             }, 0);
+
+            setTimeout(() => {
+                wilson2.style.marginBottom  = "-180px";
+            }, 0)
 
         } else if(localStorage.getItem("character") == "Wilson"){
             
@@ -243,10 +249,572 @@ function ganar_partida(){
     recordSegundos.innerHTML = `${localStorage.getItem("tiempo de juego")} segundos`;
 }
 
+function perder_partida(){
+    if(playing.classList.contains('playing-show')){
+        playing.classList.replace('playing-show', 'playing');
+    }
+    if(page2.classList.contains("desktop-2")){
+        page2.classList.replace("desktop-2", "desktop-2-show");
+    }
+
+    if(winner.classList.contains('winner-show')){
+        winner.classList.replace('winner-show', 'winner');
+    }
+}
+
 
 
 function hardMode() {
-    console.log("hard");
-}
+   
+    
+   
+    /*posiciones caras*/
+    let inaki1 = document.querySelector(".inaki1");
+    let inaki2 = document.querySelector(".inaki2");
+    let inaki3 = document.querySelector(".inaki3");
+    let inaki4 = document.querySelector(".inaki4");
+    let inaki5 = document.querySelector(".inaki5");
+    let inaki6 = document.querySelector(".inaki6");
+    let victor1 = document.querySelector(".victor1");
+    let victor2 = document.querySelector(".victor2");
+    let victor3 = document.querySelector(".victor3");
+    let victor4 = document.querySelector(".victor4");
+    let victor5 = document.querySelector(".victor5");
+    let victor6 = document.querySelector(".victor6");
+    let wilson1 = document.querySelector(".wilson1");
+    let wilson2 = document.querySelector(".wilson2");
+    let wilson3 = document.querySelector(".wilson3");
+    let wilson4 = document.querySelector(".wilson4");
+    let wilson5 = document.querySelector(".wilson5");
+    let wilson6 = document.querySelector(".wilson6");
 
+    /*TIEMPO DE JUEGO */
+    let tiempoJuego = 0;
+    
+    let time = setInterval(() => {
+        tiempoJuego += 0.01;
+        console.log(tiempoJuego.toFixed(3));
+        localStorage.setItem("tiempo de juego", tiempoJuego.toFixed(3) );
+    }, 10);
+
+    /*Numero aleatorio*/
+    let numeroAleatorio = Math.floor((Math.random() * (6)) + 1);
+    if(numeroAleatorio == 1){
+        if(localStorage.getItem("character") == "Inaki"){
+
+        let inakiWin = document.querySelectorAll(".inaki-win");
+        for(let i = 0; i < inakiWin.length; i++ ){
+         inakiWin[i].addEventListener("click", ganar_partida);
+        
+         let victorLose = document.querySelectorAll(".victor-win");
+         for(let i = 0; i < victorLose.length; i++ ){
+          victorLose[i].addEventListener("click", perder_partida);
+         }
+         let wilsonLose = document.querySelectorAll(".wilson-win");
+         for(let i = 0; i < wilsonLose.length; i++ ){
+          wilsonLose[i].addEventListener("click", perder_partida);
+         }
+    
+    }
+            setTimeout(() => {
+                inaki1.style.marginBottom  = "-440px";
+            }, 0);
+
+            setTimeout(() => {
+                wilson2.style.marginBottom  = "-180px";
+            }, 0)
+
+            setTimeout(() => {
+                victor5.style.marginBottom  = "-215px";
+            }, 0);
+
+
+        } else if(localStorage.getItem("character") == "Wilson"){
+
+        let wilsonWin = document.querySelectorAll(".wilson-win");
+        for(let i = 0; i < wilsonWin.length; i++ ){
+         wilsonWin[i].addEventListener("click", ganar_partida);
+        
+         let victorLose = document.querySelectorAll(".victor-win");
+         for(let i = 0; i < victorLose.length; i++ ){
+          victorLose[i].addEventListener("click", perder_partida);
+         }
+         let inakiLose = document.querySelectorAll(".inaki-win");
+         for(let i = 0; i < inakiLose.length; i++ ){
+          inakiLose[i].addEventListener("click", perder_partida);
+         }
+        }
+            
+            setTimeout(() => {
+                wilson1.style.marginBottom  = "-440px";
+            }, 0);
+
+            setTimeout(() => {
+                inaki6.style.marginBottom  = "-545px";
+            }, 0);
+
+            setTimeout(() => {
+                victor3.style.marginBottom  = "-540px";
+            }, 0);
+           
+        }else {
+        let victorWin = document.querySelectorAll(".victor-win");
+        for(let i = 0; i < victorWin.length; i++ ){
+         victorWin[i].addEventListener("click", ganar_partida);
+        
+         let wilsonLose = document.querySelectorAll(".wilson-win");
+         for(let i = 0; i < wilsonLose.length; i++ ){
+          wilsonLose[i].addEventListener("click", perder_partida);
+         }
+         let inakiLose = document.querySelectorAll(".inaki-win");
+         for(let i = 0; i < inakiLose.length; i++ ){
+          inakiLose[i].addEventListener("click", perder_partida);
+         }
+        }
+            setTimeout(() => {
+                victor1.style.marginBottom  = "-440px";
+            }, 0);
+
+            setTimeout(() => {
+                inaki5.style.marginBottom  = "-215px";
+            }, 0);
+
+            setTimeout(() => {
+                wilson3.style.marginBottom  = "-540px";
+            }, 0);
+        }
+
+    }else if(numeroAleatorio == 2){
+        if(localStorage.getItem("character") == "Inaki"){
+
+        let inakiWin = document.querySelectorAll(".inaki-win");
+        for(let i = 0; i < inakiWin.length; i++ ){
+         inakiWin[i].addEventListener("click", ganar_partida);
+        
+         let victorLose = document.querySelectorAll(".victor-win");
+         for(let i = 0; i < victorLose.length; i++ ){
+          victorLose[i].addEventListener("click", perder_partida);
+         }
+         let wilsonLose = document.querySelectorAll(".wilson-win");
+         for(let i = 0; i < wilsonLose.length; i++ ){
+          wilsonLose[i].addEventListener("click", perder_partida);
+         }
+    
+    }
+            setTimeout(() => {
+                inaki2.style.marginBottom  = "-180px";
+            }, 0);
+
+            setTimeout(() => {
+                wilson4.style.marginBottom  = "-360px";
+            }, 0)
+
+            setTimeout(() => {
+                victor6.style.marginBottom  = "-545px";
+            }, 0);
+
+
+        } else if(localStorage.getItem("character") == "Wilson"){
+
+        let wilsonWin = document.querySelectorAll(".wilson-win");
+        for(let i = 0; i < wilsonWin.length; i++ ){
+         wilsonWin[i].addEventListener("click", ganar_partida);
+        
+         let victorLose = document.querySelectorAll(".victor-win");
+         for(let i = 0; i < victorLose.length; i++ ){
+          victorLose[i].addEventListener("click", perder_partida);
+         }
+         let inakiLose = document.querySelectorAll(".inaki-win");
+         for(let i = 0; i < inakiLose.length; i++ ){
+          inakiLose[i].addEventListener("click", perder_partida);
+         }
+        }
+            setTimeout(() => {
+                wilson2.style.marginBottom  = "-180px";
+            }, 0)
+
+            setTimeout(() => {
+                inaki6.style.marginBottom  = "-545px";
+            }, 0);
+
+            setTimeout(() => {
+                victor5.style.marginBottom  = "-215px";
+            }, 0);
+
+                
+        }else {
+        let victorWin = document.querySelectorAll(".victor-win");
+        for(let i = 0; i < victorWin.length; i++ ){
+         victorWin[i].addEventListener("click", ganar_partida);
+        
+         let wilsonLose = document.querySelectorAll(".wilson-win");
+         for(let i = 0; i < wilsonLose.length; i++ ){
+          wilsonLose[i].addEventListener("click", perder_partida);
+         }
+         let inakiLose = document.querySelectorAll(".inaki-win");
+         for(let i = 0; i < inakiLose.length; i++ ){
+          inakiLose[i].addEventListener("click", perder_partida);
+         }
+        }
+            setTimeout(() => {
+                victor2.style.marginBottom  = "-180px";
+            }, 0);
+
+            setTimeout(() => {
+                inaki6.style.marginBottom  = "-545px";
+            }, 0);
+
+            setTimeout(() => {
+                wilson3.style.marginBottom  = "-540px";
+            }, 0);
+        }
+
+    }else if(numeroAleatorio == 3){
+        
+        if(localStorage.getItem("character") == "Inaki"){
+        let inakiWin = document.querySelectorAll(".inaki-win");
+        for(let i = 0; i < inakiWin.length; i++ ){
+         inakiWin[i].addEventListener("click", ganar_partida);
+        
+         let victorLose = document.querySelectorAll(".victor-win");
+         for(let i = 0; i < victorLose.length; i++ ){
+          victorLose[i].addEventListener("click", perder_partida);
+         }
+         let wilsonLose = document.querySelectorAll(".wilson-win");
+         for(let i = 0; i < wilsonLose.length; i++ ){
+          wilsonLose[i].addEventListener("click", perder_partida);
+         }
+    
+    }
+            setTimeout(() => {
+                inaki3.style.marginBottom  = "-540px";
+            }, 0);
+
+            setTimeout(() => {
+                victor4.style.marginBottom  = "-360px";
+            }, 0);
+
+            setTimeout(() => {
+                wilson2.style.marginBottom  = "-180px";
+            }, 0)
+
+        } else if(localStorage.getItem("character") == "Wilson"){
+
+        let wilsonWin = document.querySelectorAll(".wilson-win");
+        for(let i = 0; i < wilsonWin.length; i++ ){
+         wilsonWin[i].addEventListener("click", ganar_partida);
+        
+         let victorLose = document.querySelectorAll(".victor-win");
+         for(let i = 0; i < victorLose.length; i++ ){
+          victorLose[i].addEventListener("click", perder_partida);
+         }
+         let inakiLose = document.querySelectorAll(".inaki-win");
+         for(let i = 0; i < inakiLose.length; i++ ){
+          inakiLose[i].addEventListener("click", perder_partida);
+         }
+        }
+            setTimeout(() => {
+                wilson3.style.marginBottom  = "-540px";
+            }, 0)
+
+            setTimeout(() => {
+                inaki2.style.marginBottom  = "-180px";
+            }, 0);
+
+            setTimeout(() => {
+                victor6.style.marginBottom  = "-545px";
+            }, 0);
+
+
+                
+        }else {
+        let victorWin = document.querySelectorAll(".victor-win");
+        for(let i = 0; i < victorWin.length; i++ ){
+         victorWin[i].addEventListener("click", ganar_partida);
+        
+         let wilsonLose = document.querySelectorAll(".wilson-win");
+         for(let i = 0; i < wilsonLose.length; i++ ){
+          wilsonLose[i].addEventListener("click", perder_partida);
+         }
+         let inakiLose = document.querySelectorAll(".inaki-win");
+         for(let i = 0; i < inakiLose.length; i++ ){
+          inakiLose[i].addEventListener("click", perder_partida);
+         }
+        }
+            setTimeout(() => {
+                victor3.style.marginBottom  = "-540px";
+            }, 0);
+
+            setTimeout(() => {
+                wilson2.style.marginBottom  = "-180px";
+            }, 0);
+
+            setTimeout(() => {
+                inaki6.style.marginBottom  = "-545px";
+            }, 0);
+
+
+        }
+    }else if(numeroAleatorio == 4){
+        if(localStorage.getItem("character") == "Inaki"){
+        
+        let inakiWin = document.querySelectorAll(".inaki-win");
+        for(let i = 0; i < inakiWin.length; i++ ){
+         inakiWin[i].addEventListener("click", ganar_partida);
+        
+         let victorLose = document.querySelectorAll(".victor-win");
+         for(let i = 0; i < victorLose.length; i++ ){
+          victorLose[i].addEventListener("click", perder_partida);
+         }
+         let wilsonLose = document.querySelectorAll(".wilson-win");
+         for(let i = 0; i < wilsonLose.length; i++ ){
+          wilsonLose[i].addEventListener("click", perder_partida);
+         }
+    
+    }
+            
+            setTimeout(() => {
+                inaki4.style.marginBottom  = "-360px";
+            }, 0);
+
+            setTimeout(() => {
+                victor1.style.marginBottom  = "-440px";
+            }, 0);
+
+            setTimeout(() => {
+                wilson2.style.marginBottom  = "-180px";
+            }, 0);
+
+
+        } else if(localStorage.getItem("character") == "Wilson"){
+        let wilsonWin = document.querySelectorAll(".wilson-win");
+        for(let i = 0; i < wilsonWin.length; i++ ){
+        wilsonWin[i].addEventListener("click", ganar_partida);
+            
+        let victorLose = document.querySelectorAll(".victor-win");
+        for(let i = 0; i < victorLose.length; i++ ){
+        victorLose[i].addEventListener("click", perder_partida);
+        }
+        let inakiLose = document.querySelectorAll(".inaki-win");
+        for(let i = 0; i < inakiLose.length; i++ ){
+        inakiLose[i].addEventListener("click", perder_partida);
+    }
+    }
+            setTimeout(() => {
+                wilson4.style.marginBottom  = "-360px";
+            }, 0)
+
+            setTimeout(() => {
+                inaki1.style.marginBottom  = "-440px";
+            }, 0);
+
+            setTimeout(() => {
+                victor6.style.marginBottom  = "-440px";
+            }, 0);
+
+
+        }else {
+        let victorWin = document.querySelectorAll(".victor-win");
+        for(let i = 0; i < victorWin.length; i++ ){
+         victorWin[i].addEventListener("click", ganar_partida);
+        
+         let wilsonLose = document.querySelectorAll(".wilson-win");
+         for(let i = 0; i < wilsonLose.length; i++ ){
+          wilsonLose[i].addEventListener("click", perder_partida);
+         }
+         let inakiLose = document.querySelectorAll(".inaki-win");
+         for(let i = 0; i < inakiLose.length; i++ ){
+          inakiLose[i].addEventListener("click", perder_partida);
+         }
+        }
+            setTimeout(() => {
+                victor4.style.marginBottom  = "-360px";
+            }, 0);
+
+            setTimeout(() => {
+                inaki2.style.marginBottom  = "-180px";
+            }, 0);
+
+            setTimeout(() => {
+                wilson3.style.marginBottom  = "-540px";
+            }, 0)
+        }
+    }else if(numeroAleatorio == 5){
+        if(localStorage.getItem("character") == "Inaki"){
+            
+        let inakiWin = document.querySelectorAll(".inaki-win");
+        for(let i = 0; i < inakiWin.length; i++ ){
+        inakiWin[i].addEventListener("click", ganar_partida);
+            
+        let victorLose = document.querySelectorAll(".victor-win");
+        for(let i = 0; i < victorLose.length; i++ ){
+        victorLose[i].addEventListener("click", perder_partida);
+        }
+        let wilsonLose = document.querySelectorAll(".wilson-win");
+        for(let i = 0; i < wilsonLose.length; i++ ){
+        wilsonLose[i].addEventListener("click", perder_partida);
+        }
+        
+        }
+            setTimeout(() => {
+                inaki5.style.marginBottom  = "-215px";
+            }, 0);
+
+            setTimeout(() => {
+                wilson4.style.marginBottom  = "-360px";
+            }, 0)
+
+            setTimeout(() => {
+                victor1.style.marginBottom  = "-440px";
+            }, 0);
+
+        
+        } else if(localStorage.getItem("character") == "Wilson"){
+            let wilsonWin = document.querySelectorAll(".wilson-win");
+            for(let i = 0; i < wilsonWin.length; i++ ){
+            wilsonWin[i].addEventListener("click", ganar_partida);
+                
+            let victorLose = document.querySelectorAll(".victor-win");
+            for(let i = 0; i < victorLose.length; i++ ){
+            victorLose[i].addEventListener("click", perder_partida);
+            }
+            let inakiLose = document.querySelectorAll(".inaki-win");
+            for(let i = 0; i < inakiLose.length; i++ ){
+            inakiLose[i].addEventListener("click", perder_partida);
+        }
+        }
+            setTimeout(() => {
+                wilson5.style.marginBottom  = "-215px";
+            }, 0)
+
+            setTimeout(() => {
+                victor2.style.marginBottom  = "-180px";
+            }, 0);
+
+            setTimeout(() => {
+                inaki6.style.marginBottom  = "-545px";
+            }, 0);
+
+
+                
+        }else {
+            let victorWin = document.querySelectorAll(".victor-win");
+            for(let i = 0; i < victorWin.length; i++ ){
+             victorWin[i].addEventListener("click", ganar_partida);
+            
+             let wilsonLose = document.querySelectorAll(".wilson-win");
+             for(let i = 0; i < wilsonLose.length; i++ ){
+              wilsonLose[i].addEventListener("click", perder_partida);
+             }
+             let inakiLose = document.querySelectorAll(".inaki-win");
+             for(let i = 0; i < inakiLose.length; i++ ){
+              inakiLose[i].addEventListener("click", perder_partida);
+             }
+            }
+
+            setTimeout(() => {
+                victor5.style.marginBottom  = "-215px";
+            }, 0);
+
+            setTimeout(() => {
+                wilson3.style.marginBottom  = "-540px";
+            }, 0);
+
+            setTimeout(() => {
+                inaki6.style.marginBottom  = "-545px";
+            }, 0);
+
+
+        }
+
+    }else {
+        if(localStorage.getItem("character") == "Inaki"){
+        let inakiWin = document.querySelectorAll(".inaki-win");
+        for(let i = 0; i < inakiWin.length; i++ ){
+        inakiWin[i].addEventListener("click", ganar_partida);
+            
+        let victorLose = document.querySelectorAll(".victor-win");
+        for(let i = 0; i < victorLose.length; i++ ){
+        victorLose[i].addEventListener("click", perder_partida);
+        }
+        let wilsonLose = document.querySelectorAll(".wilson-win");
+        for(let i = 0; i < wilsonLose.length; i++ ){
+        wilsonLose[i].addEventListener("click", perder_partida);
+        }
+        
+        }
+        
+            setTimeout(() => {
+                inaki6.style.marginBottom  = "-545px";
+            }, 0);
+
+            setTimeout(() => {
+                wilson4.style.marginBottom  = "-360px";
+            }, 0)
+
+            setTimeout(() => {
+                victor1.style.marginBottom  = "-440px";
+            }, 0);
+
+
+
+        } else if(localStorage.getItem("character") == "Wilson"){
+            let wilsonWin = document.querySelectorAll(".wilson-win");
+            for(let i = 0; i < wilsonWin.length; i++ ){
+            wilsonWin[i].addEventListener("click", ganar_partida);
+                
+            let victorLose = document.querySelectorAll(".victor-win");
+            for(let i = 0; i < victorLose.length; i++ ){
+            victorLose[i].addEventListener("click", perder_partida);
+            }
+            let inakiLose = document.querySelectorAll(".inaki-win");
+            for(let i = 0; i < inakiLose.length; i++ ){
+            inakiLose[i].addEventListener("click", perder_partida);
+        }
+        }
+            setTimeout(() => {
+                wilson6.style.marginBottom  = "-545px";
+            }, 0)
+
+            setTimeout(() => {
+                victor5.style.marginBottom  = "-215px";
+            }, 0);
+
+            setTimeout(() => {
+                inaki3.style.marginBottom  = "-540px";
+            }, 0);
+
+     
+        }else {
+        let victorWin = document.querySelectorAll(".victor-win");
+        for(let i = 0; i < victorWin.length; i++ ){
+         victorWin[i].addEventListener("click", ganar_partida);
+        
+         let wilsonLose = document.querySelectorAll(".wilson-win");
+         for(let i = 0; i < wilsonLose.length; i++ ){
+          wilsonLose[i].addEventListener("click", perder_partida);
+         }
+         let inakiLose = document.querySelectorAll(".inaki-win");
+         for(let i = 0; i < inakiLose.length; i++ ){
+          inakiLose[i].addEventListener("click", perder_partida);
+         }
+        }
+        
+            setTimeout(() => {
+                victor6.style.marginBottom  = "-545px";
+            }, 0);
+
+            setTimeout(() => {
+                wilson2.style.marginBottom  = "-180px";
+            }, 0);
+
+            setTimeout(() => {
+                inaki1.style.marginBottom  = "-440px";
+            }, 0);
+
+   
+
+        }
+    }
+}
 
