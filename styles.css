@@ -470,6 +470,11 @@ input[type = "radio" ]:checked + label {
     width: 40%;
     height: 60%;
 }
+
+.wrong_face button {
+    margin-bottom: 20px;
+}
+
 .wrong_face div {
     display: flex;
     justify-content: space-between;

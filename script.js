@@ -13,6 +13,7 @@ const countdown = document.querySelector(".countdown")
 const getReady = document.querySelector(".get-ready")
 const caraSeleccionada = document.querySelector(".cara-seleccionada");
 const recordSegundos = document.querySelector(".record-segundos");
+const lose = document.querySelector(".lose");
 
 /*///////////////////////MODO FACIL///////////////*/
 
@@ -253,8 +254,8 @@ function perder_partida(){
     if(playing.classList.contains('playing-show')){
         playing.classList.replace('playing-show', 'playing');
     }
-    if(page2.classList.contains("desktop-2")){
-        page2.classList.replace("desktop-2", "desktop-2-show");
+    if(lose.classList.contains("lose")){
+        lose.classList.replace("lose", "lose-show");
     }
 
     if(winner.classList.contains('winner-show')){
