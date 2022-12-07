@@ -70,7 +70,7 @@ function function_play(event){
     }
     
     /*COUNTDOWN 5 SEGUNDOS*/
-    let contador = 0;
+    let contador = 5;
     const message = setInterval(()=>{  
         console.log(contador);
         contador--;
@@ -175,7 +175,7 @@ function easyMode() {
             }, 0);
 
             setTimeout(() => {
-                victor1.style.marginBottom  = "-6070px";
+                victor1.style.marginBottom  = "-607px";
             }, 2000);
         }
     } else if(numeroAleatorio == 2){
@@ -865,7 +865,7 @@ function hardMode() {
             }, 3000);
 
             setTimeout(() => {
-                victor6.style.marginBottom  = "-440px";
+                victor6.style.marginBottom  = "-545px";
             }, 0);
 
             setTimeout(() => {
