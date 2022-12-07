@@ -14,6 +14,12 @@ const getReady = document.querySelector(".get-ready")
 const caraSeleccionada = document.querySelector(".cara-seleccionada");
 const recordSegundos = document.querySelector(".record-segundos");
 const lose = document.querySelector(".lose");
+const sameFace = document.querySelector(".return-lose");
+const difFace = document.querySelector(".again-lose");
+const page4 = document.querySelector(".who-face-pattle");
+const sameFaceWin = document.querySelector(".return");
+const difFaceWin = document.querySelector(".again");
+
 
 /*///////////////////////MODO FACIL///////////////*/
 
@@ -23,6 +29,12 @@ const lose = document.querySelector(".lose");
 /*EVENTOS*/
 comenzarPartida.addEventListener("click", function_comenzarPartida);
 play.addEventListener("submit", function_play);
+sameFace.addEventListener("click", function_sameFace);
+difFace.addEventListener("click", function_difFace);
+sameFaceWin.addEventListener("click", function_sameFaceWin)
+difFaceWin.addEventListener("click", function_difFaceWin);
+
+
 
 /*FUNCIONES*/
 
@@ -58,7 +70,7 @@ function function_play(event){
     }
     
     /*COUNTDOWN 5 SEGUNDOS*/
-    let contador = 6;
+    let contador = 0;
     const message = setInterval(()=>{  
         console.log(contador);
         contador--;
@@ -134,7 +146,7 @@ function easyMode() {
     }, 10);
 
     /*Numero aleatorio*/
-    let numeroAleatorio = Math.floor((Math.random() * (6)) + 1);
+    let numeroAleatorio = 1;
     if(numeroAleatorio == 1){
         if(localStorage.getItem("character") == "Inaki"){
             
@@ -143,20 +155,28 @@ function easyMode() {
             }, 0);
 
             setTimeout(() => {
-                wilson2.style.marginBottom  = "-180px";
-            }, 0)
+                inaki1.style.marginBottom  = "-607px";
+            }, 2000);
 
         } else if(localStorage.getItem("character") == "Wilson"){
             
             setTimeout(() => {
                 wilson1.style.marginBottom  = "-440px";
             }, 0);
+
+            setTimeout(() => {
+                wilson1.style.marginBottom  = "-607px";
+            }, 2000);
            
         }else {
             
             setTimeout(() => {
                 victor1.style.marginBottom  = "-440px";
             }, 0);
+
+            setTimeout(() => {
+                victor1.style.marginBottom  = "-6070px";
+            }, 2000);
         }
     } else if(numeroAleatorio == 2){
         if(localStorage.getItem("character") == "Inaki"){
@@ -250,6 +270,60 @@ function ganar_partida(){
     recordSegundos.innerHTML = `${localStorage.getItem("tiempo de juego")} segundos`;
 }
 
+function function_sameFaceWin() {
+    if(winner.classList.contains("winner-show")){
+        winner.classList.replace("winner-show", "winner")
+    }
+
+    if(getReady.classList.contains("get-ready-notShow")){
+        getReady.classList.replace("get-ready-notShow", "get-ready")
+
+    }
+
+    if(playing.classList.contains('playing')){
+        playing.classList.replace('playing', 'playing-show');
+        
+        
+        let contador = 5;
+        const message = setInterval(()=>{  
+        console.log(contador);
+        contador--;
+        if (contador == 0){
+            if(getReady.classList.contains("get-ready")){
+                countdown.innerHTML = 'GO!';
+            }         
+        }else if (contador == -1) {
+            getReady.classList.replace("get-ready", "get-ready-notShow")
+            clearInterval(message);
+            if(localStorage.getItem('dificulty') == 'easy') {
+                easyMode();
+            }
+            if(localStorage.getItem('dificulty') == 'dificult') {
+                hardMode();
+            }
+
+        }
+        else {
+            countdown.innerHTML = contador;
+        } 
+    }, 1000);
+    }
+   
+}
+
+function function_difFaceWin() {
+    if(winner.classList.contains("winner-show")){
+        winner.classList.replace("winner-show", "winner")
+    }
+
+    if(page4.classList.contains('who-face-pattle')){
+        page4.classList.replace('who-face-pattle', 'who-face-pattle-show');
+        
+}
+}
+
+/*si pierdes*/
+
 function perder_partida(){
     if(playing.classList.contains('playing-show')){
         playing.classList.replace('playing-show', 'playing');
@@ -263,6 +337,57 @@ function perder_partida(){
     }
 }
 
+function function_sameFace() {
+
+    if(lose.classList.contains("lose-show")){
+        lose.classList.replace("lose-show", "lose")
+
+    }
+
+    if(getReady.classList.contains("get-ready-notShow")){
+        getReady.classList.replace("get-ready-notShow", "get-ready")
+
+    }
+
+    if(playing.classList.contains('playing')){
+        playing.classList.replace('playing', 'playing-show');
+        
+        let contador = 5;
+        const message = setInterval(()=>{  
+        console.log(contador);
+        contador--;
+        if (contador == 0){
+            if(getReady.classList.contains("get-ready")){
+                countdown.innerHTML = 'GO!';
+            }         
+        }else if (contador == -1) {
+            getReady.classList.replace("get-ready", "get-ready-notShow")
+            clearInterval(message);
+            if(localStorage.getItem('dificulty') == 'easy') {
+                easyMode();
+            }
+            if(localStorage.getItem('dificulty') == 'dificult') {
+                hardMode();
+            }
+
+        }
+        else {
+            countdown.innerHTML = contador;
+        } 
+    }, 1000);
+    }
+   
+}
+
+function function_difFace() {
+    if(lose.classList.contains("lose-show")){
+        lose.classList.replace("lose-show", "lose")
+    }
+
+    if(page4.classList.contains('who-face-pattle')){
+        page4.classList.replace('who-face-pattle', 'who-face-pattle-show');
+}
+}
 
 
 function hardMode() {
@@ -322,12 +447,24 @@ function hardMode() {
             }, 0);
 
             setTimeout(() => {
+                inaki1.style.marginBottom  = "-607px";
+            }, 3000);
+
+            setTimeout(() => {
                 wilson2.style.marginBottom  = "-180px";
             }, 0)
 
             setTimeout(() => {
+                wilson2.style.marginBottom  = "-360px";
+            }, 3000)
+
+            setTimeout(() => {
                 victor5.style.marginBottom  = "-215px";
             }, 0);
+
+            setTimeout(() => {
+                victor5.style.marginBottom  = "-378px";
+            }, 3000);
 
 
         } else if(localStorage.getItem("character") == "Wilson"){
@@ -351,12 +488,24 @@ function hardMode() {
             }, 0);
 
             setTimeout(() => {
+                wilson1.style.marginBottom  = "-607px";
+            }, 3000);
+
+            setTimeout(() => {
                 inaki6.style.marginBottom  = "-545px";
             }, 0);
 
             setTimeout(() => {
+                inaki6.style.marginBottom  = "-694px";
+            }, 3000);
+
+            setTimeout(() => {
                 victor3.style.marginBottom  = "-540px";
             }, 0);
+
+            setTimeout(() => {
+                victor3.style.marginBottom  = "-710px";
+            }, 3000);
            
         }else {
         let victorWin = document.querySelectorAll(".victor-win");
@@ -377,12 +526,24 @@ function hardMode() {
             }, 0);
 
             setTimeout(() => {
+                victor1.style.marginBottom  = "-607px";
+            }, 3000);
+
+            setTimeout(() => {
                 inaki5.style.marginBottom  = "-215px";
             }, 0);
 
             setTimeout(() => {
+                inaki5.style.marginBottom  = "-378px";
+            }, 3000);
+
+            setTimeout(() => {
                 wilson3.style.marginBottom  = "-540px";
             }, 0);
+
+            setTimeout(() => {
+                wilson3.style.marginBottom  = "-710px";
+            }, 3000);
         }
 
     }else if(numeroAleatorio == 2){
@@ -407,12 +568,24 @@ function hardMode() {
             }, 0);
 
             setTimeout(() => {
+                inaki2.style.marginBottom  = "-360px";
+            }, 3000);
+
+            setTimeout(() => {
                 wilson4.style.marginBottom  = "-360px";
             }, 0)
 
             setTimeout(() => {
+                wilson4.style.marginBottom  = "-530px";
+            }, 3000)
+
+            setTimeout(() => {
                 victor6.style.marginBottom  = "-545px";
             }, 0);
+
+            setTimeout(() => {
+                victor6.style.marginBottom  = "-694px";
+            }, 3000);
 
 
         } else if(localStorage.getItem("character") == "Wilson"){
@@ -435,12 +608,24 @@ function hardMode() {
             }, 0)
 
             setTimeout(() => {
+                wilson2.style.marginBottom  = "-360px";
+            }, 3000)
+
+            setTimeout(() => {
                 inaki6.style.marginBottom  = "-545px";
             }, 0);
 
             setTimeout(() => {
+                inaki6.style.marginBottom  = "-694px";
+            }, 3000);
+
+            setTimeout(() => {
                 victor5.style.marginBottom  = "-215px";
             }, 0);
+
+            setTimeout(() => {
+                victor5.style.marginBottom  = "-378px";
+            }, 3000);
 
                 
         }else {
@@ -462,12 +647,24 @@ function hardMode() {
             }, 0);
 
             setTimeout(() => {
+                victor2.style.marginBottom  = "-360px";
+            }, 3000);
+
+            setTimeout(() => {
                 inaki6.style.marginBottom  = "-545px";
             }, 0);
 
             setTimeout(() => {
+                inaki6.style.marginBottom  = "-694px";
+            }, 3000);
+
+            setTimeout(() => {
                 wilson3.style.marginBottom  = "-540px";
             }, 0);
+
+            setTimeout(() => {
+                wilson3.style.marginBottom  = "-710px";
+            }, 3000);
         }
 
     }else if(numeroAleatorio == 3){
@@ -492,12 +689,24 @@ function hardMode() {
             }, 0);
 
             setTimeout(() => {
+                inaki3.style.marginBottom  = "-710px";
+            }, 3000);
+
+            setTimeout(() => {
                 victor4.style.marginBottom  = "-360px";
             }, 0);
 
             setTimeout(() => {
+                victor4.style.marginBottom  = "-530px";
+            }, 3000);
+
+            setTimeout(() => {
                 wilson2.style.marginBottom  = "-180px";
             }, 0)
+
+            setTimeout(() => {
+                wilson2.style.marginBottom  = "-360px";
+            }, 3000)
 
         } else if(localStorage.getItem("character") == "Wilson"){
 
@@ -519,12 +728,25 @@ function hardMode() {
             }, 0)
 
             setTimeout(() => {
+                wilson3.style.marginBottom  = "-710px";
+            }, 3000)
+
+            setTimeout(() => {
                 inaki2.style.marginBottom  = "-180px";
             }, 0);
 
             setTimeout(() => {
+                inaki2.style.marginBottom  = "-360px";
+            }, 3000);
+
+            setTimeout(() => {
                 victor6.style.marginBottom  = "-545px";
             }, 0);
+
+            setTimeout(() => {
+                victor6.style.marginBottom  = "-694px";
+            }, 3000);
+
 
 
                 
@@ -547,12 +769,24 @@ function hardMode() {
             }, 0);
 
             setTimeout(() => {
+                victor3.style.marginBottom  = "-710px";
+            }, 3000);
+
+            setTimeout(() => {
                 wilson2.style.marginBottom  = "-180px";
             }, 0);
 
             setTimeout(() => {
+                wilson2.style.marginBottom  = "-360px";
+            }, 3000);
+
+            setTimeout(() => {
                 inaki6.style.marginBottom  = "-545px";
             }, 0);
+
+            setTimeout(() => {
+                inaki6.style.marginBottom  = "-694px";
+            }, 3000);
 
 
         }
@@ -579,12 +813,25 @@ function hardMode() {
             }, 0);
 
             setTimeout(() => {
+                inaki4.style.marginBottom  = "-530px";
+            }, 3000);
+
+
+            setTimeout(() => {
                 victor1.style.marginBottom  = "-440px";
             }, 0);
 
             setTimeout(() => {
+                victor1.style.marginBottom  = "-607px";
+            }, 3000);
+
+            setTimeout(() => {
                 wilson2.style.marginBottom  = "-180px";
             }, 0);
+
+            setTimeout(() => {
+                wilson2.style.marginBottom  = "-360px";
+            }, 3000);
 
 
         } else if(localStorage.getItem("character") == "Wilson"){
@@ -606,12 +853,24 @@ function hardMode() {
             }, 0)
 
             setTimeout(() => {
+                wilson4.style.marginBottom  = "-530px";
+            }, 3000)
+
+            setTimeout(() => {
                 inaki1.style.marginBottom  = "-440px";
             }, 0);
 
             setTimeout(() => {
+                inaki1.style.marginBottom  = "-607px";
+            }, 3000);
+
+            setTimeout(() => {
                 victor6.style.marginBottom  = "-440px";
             }, 0);
+
+            setTimeout(() => {
+                victor6.style.marginBottom  = "-694px";
+            }, 3000);
 
 
         }else {
@@ -633,13 +892,26 @@ function hardMode() {
             }, 0);
 
             setTimeout(() => {
+                victor4.style.marginBottom  = "-530px";
+            }, 3000);
+
+            setTimeout(() => {
                 inaki2.style.marginBottom  = "-180px";
             }, 0);
 
             setTimeout(() => {
+                inaki2.style.marginBottom  = "-360px";
+            }, 3000);
+
+            setTimeout(() => {
                 wilson3.style.marginBottom  = "-540px";
             }, 0)
+
+            setTimeout(() => {
+                wilson3.style.marginBottom  = "-710px";
+            }, 3000)
         }
+
     }else if(numeroAleatorio == 5){
         if(localStorage.getItem("character") == "Inaki"){
             
@@ -662,12 +934,24 @@ function hardMode() {
             }, 0);
 
             setTimeout(() => {
+                inaki5.style.marginBottom  = "-378px";
+            }, 3000);
+
+            setTimeout(() => {
                 wilson4.style.marginBottom  = "-360px";
             }, 0)
 
             setTimeout(() => {
+                wilson4.style.marginBottom  = "-530px";
+            }, 3000)
+
+            setTimeout(() => {
                 victor1.style.marginBottom  = "-440px";
             }, 0);
+
+            setTimeout(() => {
+                victor1.style.marginBottom  = "-607px";
+            }, 3000);
 
         
         } else if(localStorage.getItem("character") == "Wilson"){
@@ -689,12 +973,24 @@ function hardMode() {
             }, 0)
 
             setTimeout(() => {
+                wilson5.style.marginBottom  = "-378px";
+            }, 3000)
+
+            setTimeout(() => {
                 victor2.style.marginBottom  = "-180px";
             }, 0);
 
             setTimeout(() => {
+                victor2.style.marginBottom  = "-360px";
+            }, 3000);
+
+            setTimeout(() => {
                 inaki6.style.marginBottom  = "-545px";
             }, 0);
+
+            setTimeout(() => {
+                inaki6.style.marginBottom  = "-694px";
+            }, 3000);
 
 
                 
@@ -718,12 +1014,24 @@ function hardMode() {
             }, 0);
 
             setTimeout(() => {
+                victor5.style.marginBottom  = "-378px";
+            }, 3000);
+
+            setTimeout(() => {
                 wilson3.style.marginBottom  = "-540px";
             }, 0);
 
             setTimeout(() => {
+                wilson3.style.marginBottom  = "-710px";
+            }, 3000);
+
+            setTimeout(() => {
                 inaki6.style.marginBottom  = "-545px";
             }, 0);
+
+            setTimeout(() => {
+                inaki6.style.marginBottom  = "-694px";
+            }, 3000);
 
 
         }
@@ -750,12 +1058,24 @@ function hardMode() {
             }, 0);
 
             setTimeout(() => {
+                inaki6.style.marginBottom  = "-694px";
+            }, 3000);
+
+            setTimeout(() => {
                 wilson4.style.marginBottom  = "-360px";
             }, 0)
 
             setTimeout(() => {
+                wilson4.style.marginBottom  = "-530px";
+            }, 3000)
+
+            setTimeout(() => {
                 victor1.style.marginBottom  = "-440px";
             }, 0);
+
+            setTimeout(() => {
+                victor1.style.marginBottom  = "-607px";
+            }, 3000);
 
 
 
@@ -775,15 +1095,27 @@ function hardMode() {
         }
             setTimeout(() => {
                 wilson6.style.marginBottom  = "-545px";
-            }, 0)
+            }, 0);
+
+            setTimeout(() => {
+                wilson6.style.marginBottom  = "-694px";
+            }, 3000);
 
             setTimeout(() => {
                 victor5.style.marginBottom  = "-215px";
             }, 0);
 
             setTimeout(() => {
+                victor5.style.marginBottom  = "-378px";
+            }, 3000);
+
+            setTimeout(() => {
                 inaki3.style.marginBottom  = "-540px";
             }, 0);
+
+            setTimeout(() => {
+                inaki3.style.marginBottom  = "-710px";
+            }, 3000);
 
      
         }else {
@@ -806,12 +1138,24 @@ function hardMode() {
             }, 0);
 
             setTimeout(() => {
+                victor6.style.marginBottom  = "-694px";
+            }, 3000);
+
+            setTimeout(() => {
                 wilson2.style.marginBottom  = "-180px";
             }, 0);
 
             setTimeout(() => {
+                wilson2.style.marginBottom  = "-360px";
+            }, 3000);
+
+            setTimeout(() => {
                 inaki1.style.marginBottom  = "-440px";
             }, 0);
+
+            setTimeout(() => {
+                inaki1.style.marginBottom  = "-607px";
+            }, 3000);
 
    
 

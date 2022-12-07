@@ -5,11 +5,8 @@ body {
     width: 1420px;
     margin: 0 auto;
     background-color: #3A762B;
-    
-
-
-
 }
+
 /*DESKTOP 1*/
 
 .desktop-1 {
@@ -365,6 +362,11 @@ input[type = "radio" ]:checked + label {
     transition: 1s;
 }
 
+.img-ease-notShow {
+    display: none;
+
+}
+
 .img-ease:hover {
     cursor: url("assets/cursor.png"), progress;
 }
@@ -381,11 +383,11 @@ input[type = "radio" ]:checked + label {
     display: none;
 }
 
-.who-face-pattle {
-    background-color: #3A762B;
+.who-face-pattle-show {
     width: 1420px;
     height: 710px;
     padding-top: 250px;
+    background: url("assets/black-backgorund.png");
 }
 
 .who-box {
@@ -417,13 +419,15 @@ input[type = "radio" ]:checked + label {
     font-weight: bold;
     color: #D9D9D9;
     cursor: pointer;
-    padding-right: 30px
-
+    padding-right: 30px;
+    margin-left: -30px;
 }
 
 .flex-box input {
     cursor: pointer;
     width: 20px;
+    margin-left: -30px;
+
 }
 
 .img-people {
@@ -496,6 +500,17 @@ input[type = "radio" ]:checked + label {
     font-weight: bold;
     font-size: 15px;
     border:0px;
+    cursor: pointer;
+}
+
+.return-lose {
+    margin-right:4.5%;
+    background-color: #CD0707;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 15px;
+    border:0px;
+    cursor: pointer;
 }
 
 .again {
@@ -505,8 +520,18 @@ input[type = "radio" ]:checked + label {
     font-weight: bold;
     font-size: 15px;
     border:1px solid #676767;
+    cursor: pointer;
 }
 
+.again-lose {
+    margin-left:4.5%;
+    color:#8F8F8F;
+    background-color: #DBDBDB;
+    font-weight: bold;
+    font-size: 15px;
+    border:1px solid #676767;
+    cursor: pointer;
+}
 .wrong_face h2 {
     text-align: center;
     color: #615101;
