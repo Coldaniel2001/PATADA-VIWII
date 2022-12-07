@@ -6,6 +6,7 @@ const page2 = document.querySelector(".desktop-2")
 const easyDif = document.querySelectorAll(".easy-dif");
 const usuario = document.querySelector('#quien-eres');
 const play = document.querySelector('.formulario-jugar');
+const returnPlay = document.querySelector('.volver-formulario-jugar');
 const playing = document.querySelector('.playing');
 const winner = document.querySelector('.winner');
 const currentUser = document.querySelector('.current-user');
@@ -20,6 +21,26 @@ const page4 = document.querySelector(".who-face-pattle");
 const sameFaceWin = document.querySelector(".return");
 const difFaceWin = document.querySelector(".again");
 
+  /*posiciones caras*/
+  let inaki1 = document.querySelector(".inaki1");
+  let inaki2 = document.querySelector(".inaki2");
+  let inaki3 = document.querySelector(".inaki3");
+  let inaki4 = document.querySelector(".inaki4");
+  let inaki5 = document.querySelector(".inaki5");
+  let inaki6 = document.querySelector(".inaki6");
+  let victor1 = document.querySelector(".victor1");
+  let victor2 = document.querySelector(".victor2");
+  let victor3 = document.querySelector(".victor3");
+  let victor4 = document.querySelector(".victor4");
+  let victor5 = document.querySelector(".victor5");
+  let victor6 = document.querySelector(".victor6");
+  let wilson1 = document.querySelector(".wilson1");
+  let wilson2 = document.querySelector(".wilson2");
+  let wilson3 = document.querySelector(".wilson3");
+  let wilson4 = document.querySelector(".wilson4");
+  let wilson5 = document.querySelector(".wilson5");
+  let wilson6 = document.querySelector(".wilson6");
+
 
 /*///////////////////////MODO FACIL///////////////*/
 
@@ -33,7 +54,7 @@ sameFace.addEventListener("click", function_sameFace);
 difFace.addEventListener("click", function_difFace);
 sameFaceWin.addEventListener("click", function_sameFaceWin)
 difFaceWin.addEventListener("click", function_difFaceWin);
-
+returnPlay.addEventListener("submit",function_difFaceWinPlay);
 
 
 /*FUNCIONES*/
@@ -116,25 +137,7 @@ function easyMode() {
     for(let i = 0; i < imgEase.length; i++ ){
      imgEase[i].addEventListener("click", ganar_partida);
     }
-    /*posiciones caras*/
-    let inaki1 = document.querySelector(".inaki1");
-    let inaki2 = document.querySelector(".inaki2");
-    let inaki3 = document.querySelector(".inaki3");
-    let inaki4 = document.querySelector(".inaki4");
-    let inaki5 = document.querySelector(".inaki5");
-    let inaki6 = document.querySelector(".inaki6");
-    let victor1 = document.querySelector(".victor1");
-    let victor2 = document.querySelector(".victor2");
-    let victor3 = document.querySelector(".victor3");
-    let victor4 = document.querySelector(".victor4");
-    let victor5 = document.querySelector(".victor5");
-    let victor6 = document.querySelector(".victor6");
-    let wilson1 = document.querySelector(".wilson1");
-    let wilson2 = document.querySelector(".wilson2");
-    let wilson3 = document.querySelector(".wilson3");
-    let wilson4 = document.querySelector(".wilson4");
-    let wilson5 = document.querySelector(".wilson5");
-    let wilson6 = document.querySelector(".wilson6");
+  
 
     /*TIEMPO DE JUEGO */
     let tiempoJuego = 0;
@@ -143,20 +146,27 @@ function easyMode() {
         tiempoJuego += 0.01;
         console.log(tiempoJuego.toFixed(3));
         localStorage.setItem("tiempo de juego", tiempoJuego.toFixed(3) );
+        if(winner.classList.contains("winner-show")){
+            clearInterval(time);
+        }
     }, 10);
 
     /*Numero aleatorio*/
-    let numeroAleatorio = 1;
+    let numeroAleatorio = Math.floor(Math.random() * (6) + 1);
+    localStorage.setItem("Numero Aleatorio", numeroAleatorio)
     if(numeroAleatorio == 1){
         if(localStorage.getItem("character") == "Inaki"){
-            
-            setTimeout(() => {
-                inaki1.style.marginBottom  = "-440px";
-            }, 0);
 
-            setTimeout(() => {
-                inaki1.style.marginBottom  = "-607px";
-            }, 2000);
+              setInterval(() => {
+                    inaki1.style.marginBottom  = "-440px";
+                }, 0);
+    
+                setInterval(() => {
+                    inaki1.style.marginBottom  = "-607px";
+                }, 3000);
+                
+            
+            
 
         } else if(localStorage.getItem("character") == "Wilson"){
             
@@ -268,6 +278,102 @@ function ganar_partida(){
     }
     caraSeleccionada.innerHTML = `"${localStorage.getItem('character')}"`;
     recordSegundos.innerHTML = `${localStorage.getItem("tiempo de juego")} segundos`;
+
+    if(localStorage.getItem("Numero Aleatorio") == 1){
+        if(localStorage.getItem("character") == "Inaki"){
+
+            setInterval(() => {
+                inaki1.style.marginBottom  = "-607px";
+            }, 0);
+    
+        } else if(localStorage.getItem("character") == "Wilson"){
+            
+            setTimeout(() => {
+                wilson1.style.marginBottom  = "-607px";
+            }, 0);
+           
+        }else {
+            
+            setTimeout(() => {
+                victor1.style.marginBottom  = "-607px";
+            }, 0);
+        }
+    } else if(localStorage.getItem("Numero Aleatorio") == 2){
+        if(localStorage.getItem("character") == "Inaki"){
+            setTimeout(() => {
+                inaki2.style.marginBottom  = "-360px";
+            }, 0);
+        } else if(localStorage.getItem("character") == "Wilson"){
+            setTimeout(() => {
+                wilson2.style.marginBottom  = "-360px";
+            }, 0)
+                
+        }else {
+            setTimeout(() => {
+                victor2.style.marginBottom  = "-360px";
+            }, 0);
+        }
+    }else if(localStorage.getItem("Numero Aleatorio") == 3){
+        if(localStorage.getItem("character") == "Inaki"){
+            setTimeout(() => {
+                inaki3.style.marginBottom  = "-710px";
+            }, 0);
+        } else if(localStorage.getItem("character") == "Wilson"){
+            setTimeout(() => {
+                wilson3.style.marginBottom  = "-710px";
+            }, 0)
+                
+        }else {
+            setTimeout(() => {
+                victor3.style.marginBottom  = "-710px";
+            }, 0);
+        }
+    }else if(localStorage.getItem("Numero Aleatorio") == 4){
+        if(localStorage.getItem("character") == "Inaki"){
+            setTimeout(() => {
+                inaki4.style.marginBottom  = "-530px";
+            }, 0);
+        } else if(localStorage.getItem("character") == "Wilson"){
+            setTimeout(() => {
+                wilson4.style.marginBottom  = "-530px";
+            }, 0)
+                
+        }else {
+            setTimeout(() => {
+                victor4.style.marginBottom  = "-530px";
+            }, 0);
+        }
+    }else if(localStorage.getItem("Numero Aleatorio") == 5){
+        if(localStorage.getItem("character") == "Inaki"){
+            setTimeout(() => {
+                inaki5.style.marginBottom  = "-379px";
+            }, 0);
+        } else if(localStorage.getItem("character") == "Wilson"){
+            setTimeout(() => {
+                wilson5.style.marginBottom  = "-379px";
+            }, 0)
+                
+        }else {
+            setTimeout(() => {
+                victor5.style.marginBottom  = "-379px";
+            }, 0);
+        }
+    }else {
+        if(localStorage.getItem("character") == "Inaki"){
+            setTimeout(() => {
+                inaki6.style.marginBottom  = "-695px";
+            }, 0);
+        } else if(localStorage.getItem("character") == "Wilson"){
+            setTimeout(() => {
+                wilson6.style.marginBottom  = "-695px";
+            }, 0)
+                
+        }else {
+            setTimeout(() => {
+                victor6.style.marginBottom  = "-695px";
+            }, 0);
+        }
+    }
 }
 
 function function_sameFaceWin() {
@@ -317,9 +423,60 @@ function function_difFaceWin() {
     }
 
     if(page4.classList.contains('who-face-pattle')){
-        page4.classList.replace('who-face-pattle', 'who-face-pattle-show');
-        
+        page4.classList.replace('who-face-pattle', 'who-face-pattle-show'); 
+    }
 }
+
+function function_difFaceWinPlay(event){
+    event.preventDefault();
+    if(returnInaki.checked) {
+        localStorage.setItem('character', 'Inaki');
+    }
+    if(returnWilson.checked) {
+        localStorage.setItem('character', 'Wilson');
+    }
+    if(returnVictor.checked) {
+        localStorage.setItem('character', 'Victor');
+    }
+
+    if(page4.classList.contains('who-face-pattle-show')){
+        page4.classList.replace('who-face-pattle-show', 'who-face-pattle');
+    }
+    if(getReady.classList.contains("get-ready-notShow")){
+        getReady.classList.replace("get-ready-notShow", "get-ready")
+
+    }
+
+    if(playing.classList.contains('playing')){
+        playing.classList.replace('playing', 'playing-show');
+        
+        
+        let contador = 5;
+        const message = setInterval(()=>{  
+        console.log(contador);
+        contador--;
+        if (contador == 0){
+            if(getReady.classList.contains("get-ready")){
+                countdown.innerHTML = 'GO!';
+            }         
+        }else if (contador == -1) {
+            getReady.classList.replace("get-ready", "get-ready-notShow")
+            clearInterval(message);
+            if(localStorage.getItem('dificulty') == 'easy') {
+                easyMode();
+            }
+            if(localStorage.getItem('dificulty') == 'dificult') {
+                hardMode();
+            }
+
+        }else {
+            countdown.innerHTML = contador;
+        } 
+    }, 1000);
+    
+    }
+    
+    
 }
 
 /*si pierdes*/
@@ -392,27 +549,6 @@ function function_difFace() {
 
 function hardMode() {
    
-    
-   
-    /*posiciones caras*/
-    let inaki1 = document.querySelector(".inaki1");
-    let inaki2 = document.querySelector(".inaki2");
-    let inaki3 = document.querySelector(".inaki3");
-    let inaki4 = document.querySelector(".inaki4");
-    let inaki5 = document.querySelector(".inaki5");
-    let inaki6 = document.querySelector(".inaki6");
-    let victor1 = document.querySelector(".victor1");
-    let victor2 = document.querySelector(".victor2");
-    let victor3 = document.querySelector(".victor3");
-    let victor4 = document.querySelector(".victor4");
-    let victor5 = document.querySelector(".victor5");
-    let victor6 = document.querySelector(".victor6");
-    let wilson1 = document.querySelector(".wilson1");
-    let wilson2 = document.querySelector(".wilson2");
-    let wilson3 = document.querySelector(".wilson3");
-    let wilson4 = document.querySelector(".wilson4");
-    let wilson5 = document.querySelector(".wilson5");
-    let wilson6 = document.querySelector(".wilson6");
 
     /*TIEMPO DE JUEGO */
     let tiempoJuego = 0;
@@ -421,6 +557,12 @@ function hardMode() {
         tiempoJuego += 0.01;
         console.log(tiempoJuego.toFixed(3));
         localStorage.setItem("tiempo de juego", tiempoJuego.toFixed(3) );
+        if(winner.classList.contains("winner-show")){
+            clearInterval(time);
+        }
+        if(lose.classList.contains("lose-show")){
+            clearInterval(time);
+        }
     }, 10);
 
     /*Numero aleatorio*/
