@@ -144,8 +144,8 @@ function easyMode() {
     
     let time = setInterval(() => {
         tiempoJuego += 0.01;
-        console.log(tiempoJuego.toFixed(3));
-        localStorage.setItem("tiempo de juego", tiempoJuego.toFixed(3) );
+        console.log(tiempoJuego.toFixed(2));
+        localStorage.setItem("tiempo de juego", tiempoJuego.toFixed(2) );
         if(winner.classList.contains("winner-show")){
             clearInterval(time);
         }
@@ -555,8 +555,8 @@ function hardMode() {
     
     let time = setInterval(() => {
         tiempoJuego += 0.01;
-        console.log(tiempoJuego.toFixed(3));
-        localStorage.setItem("tiempo de juego", tiempoJuego.toFixed(3) );
+        console.log(tiempoJuego.toFixed(2));
+        localStorage.setItem("tiempo de juego", tiempoJuego.toFixed(2) );
         if(winner.classList.contains("winner-show")){
             clearInterval(time);
         }

@@ -32,6 +32,7 @@ body {
     padding-top: 15px;
     padding-bottom: 15px;
     margin-top: 10%;
+    font-family: 'Rubik Distressed', cursive;
 }
 
 
@@ -51,6 +52,7 @@ body {
     padding-top: 45px;
     padding-bottom: 45px;
     margin-top: 70%;
+    font-family: 'Rubik Distressed', cursive;
 }
 
 
@@ -77,6 +79,7 @@ body {
     align-items: center;
     padding: 20px;
     margin-top: 10%;
+    font-family: 'Rubik Distressed', cursive;
 }
 
 #quienEres {
@@ -86,6 +89,7 @@ body {
     width: 200px;
     height: 30px;
     color: #eb2f06;
+    font-family: 'Rubik Distressed', cursive;
 }
 
 label:not(.label-not) {
@@ -115,6 +119,7 @@ label:not(.label-not) {
     font-weight: bold;
     font-size: 20px;
     cursor: pointer;
+    font-family: 'Rubik Distressed', cursive;
 }
 
 input[type = "radio" ] {
@@ -139,6 +144,7 @@ input[type = "radio" ]:checked + label {
     width: 340px;
     text-align: center;
     border-radius: 20px;
+    font-family: 'Rubik Distressed', cursive;
 }
 
 .get-ready-notShow{
@@ -197,16 +203,18 @@ input[type = "radio" ]:checked + label {
     z-index: -1;
 }
 .currently-playing{
+    font-family: 'Rubik Distressed', cursive;
     margin-bottom: -140px;
     margin-left: 1190px;
-    background: white;
+    text-align: center;
+    color: rgb(132, 16, 16);
     margin-right: 40px;
-    padding-left: 20px;
     border-radius: 10px;
     padding-top: 1px;
     padding-bottom: 8px;
     background-color: rgb(249, 249, 189);
-    font-size: 13px;
+    font-size: 12px;
+    border: 3px solid black;
 }
 
 .up-to-face {
@@ -389,6 +397,7 @@ input[type = "radio" ]:checked + label {
     height: 710px;
     padding-top: 250px;
     background: url("assets/black-backgorund.png");
+    font-family: 'Rubik Distressed', cursive;
 }
 
 .who-box {
@@ -399,12 +408,14 @@ input[type = "radio" ]:checked + label {
     margin: 0 auto;
     margin-bottom: 30px;
     border: 2px solid #eb2f06;
+    font-family: 'Rubik Distressed', cursive;
 }
 
 .who-box h2{
     color: white;
     border-bottom: 1px solid rgb(233, 233, 233);
     padding-bottom: 20px;
+    font-family: 'Rubik Distressed', cursive;
   
 }
 
@@ -438,16 +449,17 @@ input[type = "radio" ]:checked + label {
 }
 
 .play-button {
-    background: #CD0707;
-    width: 200px;
-    height: 4vh;
-    border-radius: 10px;
-    border: 1px solid #CD0707;
-    color: white;
-    font-size: 30px;
-    margin: 0 auto;
-    display: block;
+    border: 2px solid #EA2027;
+    border-radius: 5px;
+    background: #EA2027;
+    width: 20%;
+    margin: 25px 0;
+    padding: 10px 0px;
+    color: #ecf0f1;
+    font-weight: bold;
+    font-size: 20px;
     cursor: pointer;
+    font-family: 'Rubik Distressed', cursive;
 }
 
 .countdown {
@@ -468,14 +480,18 @@ input[type = "radio" ]:checked + label {
     margin: 0 auto;
     padding-top: 10%;
     background: url("assets/black-backgorund.png");
+    font-family: 'Rubik Distressed', cursive;
 }
 .wrong_face {
-
     border-radius: 10px;
     background-color: #FFFFFF;
     width: 40%;
     height: 60%;
     margin-bottom: 200px;
+}
+
+.wrong_face h3 {
+    color: rgb(226, 5, 5);
 }
 
 .wrong_face button {
@@ -502,6 +518,7 @@ input[type = "radio" ]:checked + label {
     font-size: 15px;
     border:0px;
     cursor: pointer;
+    font-family: 'Rubik Distressed', cursive;
 }
 
 .return-lose {
@@ -512,37 +529,39 @@ input[type = "radio" ]:checked + label {
     font-size: 15px;
     border:0px;
     cursor: pointer;
+    font-family: 'Rubik Distressed', cursive;
 }
 
 .again {
     margin-left:4.5%;
-    color:#8F8F8F;
-    background-color: #DBDBDB;
+    color:#FFFFFF;
+    background-color: #cd0707;
     font-weight: bold;
     font-size: 15px;
-    border:1px solid #676767;
+    border:1px solid #cd0707;
     cursor: pointer;
+    font-family: 'Rubik Distressed', cursive;
 }
 
 .again-lose {
     margin-left:4.5%;
-    color:#8F8F8F;
-    background-color: #DBDBDB;
+    color:#FFFFFF;
+    background-color: #CD0707;
     font-weight: bold;
     font-size: 15px;
-    border:1px solid #676767;
+    border:1px solid #cd0707;
     cursor: pointer;
+    font-family: 'Rubik Distressed', cursive;
 }
 .wrong_face h2 {
     text-align: center;
-    color: #615101;
+    color: #e1c01e;
     font-size: 35px;
 }
 .wrong_face h3 {
     text-align: center;
-    color: #615101;
+    color: #060605;
     font-size: 30px;
-   
 }
 
 
@@ -642,6 +661,7 @@ input[type = "radio" ]:checked + label {
     margin: 0 auto;
     padding-top: 10%;
     background: url("assets/black-backgorund.png");
+    font-family: 'Rubik Distressed', cursive;
 }
 
 .time_up p{
@@ -678,12 +698,12 @@ input[type = "radio" ]:checked + label {
 }
 .wrong_face_winner h2 {
     text-align: center;
-    color: #615101;
+    color: #e1c01e;
     font-size: 35px;
 }
 .wrong_face_winner h3 {
     text-align: center;
-    color: #615101;
+    color: #e1c01e;
     font-size: 30px;
    
 }
