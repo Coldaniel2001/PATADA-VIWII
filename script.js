@@ -20,8 +20,19 @@ const difFace = document.querySelector(".again-lose");
 const page4 = document.querySelector(".who-face-pattle");
 const sameFaceWin = document.querySelector(".return");
 const difFaceWin = document.querySelector(".again");
+
 const record1 = document.querySelector(".record-screen1")
+const record2 = document.querySelector(".record-screen2")
+const record3 = document.querySelector(".record-screen3")
+const record4 = document.querySelector(".record-screen4")
+const record5 = document.querySelector(".record-screen5")
+
 const record1Time = document.querySelector(".time-record-1")
+const record2Time = document.querySelector(".time-record-2")
+const record3Time = document.querySelector(".time-record-3")
+const record4Time = document.querySelector(".time-record-4")
+const record5Time = document.querySelector(".time-record-5")
+
 
 
   /*posiciones caras*/
@@ -94,7 +105,7 @@ function function_play(event){
     }
     
     /*COUNTDOWN 5 SEGUNDOS*/
-    let contador = 5;
+    let contador = 0;
     const message = setInterval(()=>{  
         console.log(contador);
         contador--;
@@ -136,6 +147,8 @@ function function_comenzarPartida () {
 
 function easyMode() {
 
+    
+
     let imgEase = document.querySelectorAll(".img-ease");
     for(let i = 0; i < imgEase.length; i++ ){
      imgEase[i].addEventListener("click", ganar_partida);
@@ -149,6 +162,13 @@ function easyMode() {
         tiempoJuego += 0.01;
         console.log(tiempoJuego.toFixed(2));
         localStorage.setItem("tiempo de juego", tiempoJuego.toFixed(2) );
+
+        record1Time.innerHTML = localStorage.getItem("tiempo de juego");
+        record1.innerHTML = localStorage.getItem("username");
+
+        
+
+
         if(winner.classList.contains("winner-show")){
             clearInterval(time);
         }
@@ -552,8 +572,7 @@ function function_difFace() {
 
 function hardMode() {
 
-record1.innerHTML = localStorage.getItem("username");
-record1Time.innerHTML = localStorage.getItem("tiempo de juego")
+
 
    
 
@@ -564,13 +583,18 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
         tiempoJuego += 0.01;
         console.log(tiempoJuego.toFixed(2));
         localStorage.setItem("tiempo de juego", tiempoJuego.toFixed(2) );
+        record1.innerHTML = localStorage.getItem("username");
+        record1Time.innerHTML = localStorage.getItem("tiempo de juego");
         if(winner.classList.contains("winner-show")){
+            
             clearInterval(time);
         }
         if(lose.classList.contains("lose-show")){
             clearInterval(time);
         }
     }, 10);
+
+    
 
     /*Numero aleatorio*/
     let numeroAleatorio = Math.floor((Math.random() * (6)) + 1);
