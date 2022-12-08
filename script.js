@@ -21,13 +21,15 @@ const page4 = document.querySelector(".who-face-pattle");
 const sameFaceWin = document.querySelector(".return");
 const difFaceWin = document.querySelector(".again");
 
-const record1 = document.querySelector(".record-screen1")
+const record = document.querySelector(".record-screen1")
+const record1 = document.querySelector(".record-screen1-bueno")
 const record2 = document.querySelector(".record-screen2")
 const record3 = document.querySelector(".record-screen3")
 const record4 = document.querySelector(".record-screen4")
 const record5 = document.querySelector(".record-screen5")
 
-const record1Time = document.querySelector(".time-record-1")
+const recordTime = document.querySelector(".time-record-1")
+const record1Time = document.querySelector(".time-record-1-bueno")
 const record2Time = document.querySelector(".time-record-2")
 const record3Time = document.querySelector(".time-record-3")
 const record4Time = document.querySelector(".time-record-4")
@@ -162,13 +164,6 @@ function easyMode() {
         tiempoJuego += 0.01;
         console.log(tiempoJuego.toFixed(2));
         localStorage.setItem("tiempo de juego", tiempoJuego.toFixed(2) );
-
-        record1Time.innerHTML = localStorage.getItem("tiempo de juego");
-        record1.innerHTML = localStorage.getItem("username");
-
-        
-
-
         if(winner.classList.contains("winner-show")){
             clearInterval(time);
         }
@@ -302,8 +297,74 @@ function ganar_partida(){
     if(lose.classList.contains('lose-show')){
         lose.classList.replace('lose-show', 'lose');
     }
+    
     caraSeleccionada.innerHTML = `"${localStorage.getItem('character')}"`;
     recordSegundos.innerHTML = `${localStorage.getItem("tiempo de juego")} segundos`;
+    recordTime.innerHTML = localStorage.getItem("tiempo de juego");
+    record.innerHTML = localStorage.getItem("username");
+
+    let records = [record1, record2, record3, record4, record5];
+    let recordsTime = [record1Time, record2Time, record3Time, record4Time, record5Time];
+
+    for(let i = 0; i < records.length; i++){
+        if(records[i].innerHTML == ""){
+            records[i].innerHTML = localStorage.getItem("username");
+            recordsTime[i].innerHTML = localStorage.getItem("tiempo de juego");
+            return;
+        }
+    }
+
+    if(recordTime.innerHTML < record1Time.innerHTML){
+        record5.innerHTML = record4.innerHTML;
+        record4.innerHTML = record3.innerHTML;
+        record3.innerHTML = record2.innerHTML;
+        record2.innerHTML = record1.innerHTML;
+        record1.innerHTML = record.innerHTML;
+        
+        
+        record5Time.innerHTML = record4Time.innerHTML
+        record4Time.innerHTML = record3Time.innerHTML
+        record3Time.innerHTML = record2Time.innerHTML
+        record2Time.innerHTML = record1Time.innerHTML
+        record1Time.innerHTML = recordTime.innerHTML
+
+        
+
+    } else if(recordTime.innerHTML > record1Time.innerHTML && recordTime.innerHTML < record2Time.innerHTML) {
+        record5.innerHTML = record4.innerHTML;
+        record4.innerHTML = record3.innerHTML;
+        record3.innerHTML = record2.innerHTML;
+        record2.innerHTML = record.innerHTML;
+        
+        record5Time.innerHTML = record4Time.innerHTML
+        record4Time.innerHTML = record3Time.innerHTML
+        record3Time.innerHTML = record2Time.innerHTML
+        record2Time.innerHTML = recordTime.innerHTML
+          
+
+    } else if(recordTime.innerHTML > record2Time.innerHTML && recordTime.innerHTML < record3Time.innerHTML) {
+        record5.innerHTML = record4.innerHTML;
+        record4.innerHTML = record3.innerHTML;
+        record3.innerHTML = record.innerHTML;
+        
+        record5Time.innerHTML = record4Time.innerHTML
+        record4Time.innerHTML = record3Time.innerHTML
+        record3Time.innerHTML = recordTime.innerHTML
+    
+
+    } else if(recordTime.innerHTML > record3Time.innerHTML && recordTime.innerHTML < record4Time.innerHTML) {
+        record5.innerHTML = record4.innerHTML;
+        record4.innerHTML = record.innerHTML;
+        
+        
+        record5Time.innerHTML = record4Time.innerHTML
+        record4Time.innerHTML = recordTime.innerHTML
+        
+    } else if(recordTime.innerHTML > record4Time.innerHTML && recordTime.innerHTML < record5Time.innerHTML) {
+        record5.innerHTML = record.innerHTML;
+        record5Time.innerHTML = recordTime.innerHTML
+    }
+
 
     if(localStorage.getItem("Numero Aleatorio") == 1){
         if(localStorage.getItem("character") == "Inaki"){
@@ -585,8 +646,6 @@ function hardMode() {
         tiempoJuego += 0.01;
         console.log(tiempoJuego.toFixed(2));
         localStorage.setItem("tiempo de juego", tiempoJuego.toFixed(2) );
-        record1.innerHTML = localStorage.getItem("username");
-        record1Time.innerHTML = localStorage.getItem("tiempo de juego");
         if(winner.classList.contains("winner-show")){
             
             clearInterval(time);

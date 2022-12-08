@@ -614,7 +614,7 @@ input[type = "radio" ]:checked + label {
 
  }
 
-.time-record-1 {
+.time-record-1-bueno {
     grid-column: 4/5;
     grid-row: 2/3;
 }
@@ -662,7 +662,7 @@ input[type = "radio" ]:checked + label {
     grid-row: 6/7;
 }
 
-.record-screen1 {
+.record-screen1-bueno {
     grid-column: 2/4;
     grid-row: 2/3;
     margin-left: 40px;
@@ -758,4 +758,8 @@ input[type = "radio" ]:checked + label {
     color: #CD0707;
     font-weight: bold;
 
+}
+
+.none {
+    display: none;
 }
