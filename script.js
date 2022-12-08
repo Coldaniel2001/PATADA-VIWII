@@ -279,6 +279,9 @@ function ganar_partida(){
     if(winner.classList.contains('winner')){
         winner.classList.replace('winner', 'winner-show');
     }
+    if(lose.classList.contains('lose-show')){
+        lose.classList.replace('lose-show', 'lose');
+    }
     caraSeleccionada.innerHTML = `"${localStorage.getItem('character')}"`;
     recordSegundos.innerHTML = `${localStorage.getItem("tiempo de juego")} segundos`;
 
@@ -447,7 +450,6 @@ function function_difFaceWinPlay(event){
     }
     if(getReady.classList.contains("get-ready-notShow")){
         getReady.classList.replace("get-ready-notShow", "get-ready")
-
     }
 
     if(playing.classList.contains('playing')){
@@ -580,7 +582,7 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
         let inakiWin = document.querySelectorAll(".inaki-win");
         for(let i = 0; i < inakiWin.length; i++ ){
          inakiWin[i].addEventListener("click", ganar_partida);
-        
+        }
          let victorLose = document.querySelectorAll(".victor-win");
          for(let i = 0; i < victorLose.length; i++ ){
           victorLose[i].addEventListener("click", perder_partida);
@@ -590,7 +592,7 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
           wilsonLose[i].addEventListener("click", perder_partida);
          }
     
-    }
+    
             setTimeout(() => {
                 inaki1.style.marginBottom  = "-440px";
             }, 0);
@@ -621,7 +623,7 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
         let wilsonWin = document.querySelectorAll(".wilson-win");
         for(let i = 0; i < wilsonWin.length; i++ ){
          wilsonWin[i].addEventListener("click", ganar_partida);
-        
+        }
          let victorLose = document.querySelectorAll(".victor-win");
          for(let i = 0; i < victorLose.length; i++ ){
           victorLose[i].addEventListener("click", perder_partida);
@@ -630,7 +632,6 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
          for(let i = 0; i < inakiLose.length; i++ ){
           inakiLose[i].addEventListener("click", perder_partida);
          }
-        }
             
             setTimeout(() => {
                 wilson1.style.marginBottom  = "-440px";
@@ -660,7 +661,7 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
         let victorWin = document.querySelectorAll(".victor-win");
         for(let i = 0; i < victorWin.length; i++ ){
          victorWin[i].addEventListener("click", ganar_partida);
-        
+        }
          let wilsonLose = document.querySelectorAll(".wilson-win");
          for(let i = 0; i < wilsonLose.length; i++ ){
           wilsonLose[i].addEventListener("click", perder_partida);
@@ -669,7 +670,7 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
          for(let i = 0; i < inakiLose.length; i++ ){
           inakiLose[i].addEventListener("click", perder_partida);
          }
-        }
+        
             setTimeout(() => {
                 victor1.style.marginBottom  = "-440px";
             }, 0);
@@ -701,7 +702,7 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
         let inakiWin = document.querySelectorAll(".inaki-win");
         for(let i = 0; i < inakiWin.length; i++ ){
          inakiWin[i].addEventListener("click", ganar_partida);
-        
+        }
          let victorLose = document.querySelectorAll(".victor-win");
          for(let i = 0; i < victorLose.length; i++ ){
           victorLose[i].addEventListener("click", perder_partida);
@@ -711,7 +712,6 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
           wilsonLose[i].addEventListener("click", perder_partida);
          }
     
-    }
             setTimeout(() => {
                 inaki2.style.marginBottom  = "-180px";
             }, 0);
@@ -742,7 +742,7 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
         let wilsonWin = document.querySelectorAll(".wilson-win");
         for(let i = 0; i < wilsonWin.length; i++ ){
          wilsonWin[i].addEventListener("click", ganar_partida);
-        
+        }
          let victorLose = document.querySelectorAll(".victor-win");
          for(let i = 0; i < victorLose.length; i++ ){
           victorLose[i].addEventListener("click", perder_partida);
@@ -751,7 +751,6 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
          for(let i = 0; i < inakiLose.length; i++ ){
           inakiLose[i].addEventListener("click", perder_partida);
          }
-        }
             setTimeout(() => {
                 wilson2.style.marginBottom  = "-180px";
             }, 0)
@@ -781,7 +780,7 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
         let victorWin = document.querySelectorAll(".victor-win");
         for(let i = 0; i < victorWin.length; i++ ){
          victorWin[i].addEventListener("click", ganar_partida);
-        
+        }
          let wilsonLose = document.querySelectorAll(".wilson-win");
          for(let i = 0; i < wilsonLose.length; i++ ){
           wilsonLose[i].addEventListener("click", perder_partida);
@@ -790,7 +789,6 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
          for(let i = 0; i < inakiLose.length; i++ ){
           inakiLose[i].addEventListener("click", perder_partida);
          }
-        }
             setTimeout(() => {
                 victor2.style.marginBottom  = "-180px";
             }, 0);
@@ -822,7 +820,7 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
         let inakiWin = document.querySelectorAll(".inaki-win");
         for(let i = 0; i < inakiWin.length; i++ ){
          inakiWin[i].addEventListener("click", ganar_partida);
-        
+        }
          let victorLose = document.querySelectorAll(".victor-win");
          for(let i = 0; i < victorLose.length; i++ ){
           victorLose[i].addEventListener("click", perder_partida);
@@ -832,7 +830,6 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
           wilsonLose[i].addEventListener("click", perder_partida);
          }
     
-    }
             setTimeout(() => {
                 inaki3.style.marginBottom  = "-540px";
             }, 0);
@@ -862,7 +859,7 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
         let wilsonWin = document.querySelectorAll(".wilson-win");
         for(let i = 0; i < wilsonWin.length; i++ ){
          wilsonWin[i].addEventListener("click", ganar_partida);
-        
+        }
          let victorLose = document.querySelectorAll(".victor-win");
          for(let i = 0; i < victorLose.length; i++ ){
           victorLose[i].addEventListener("click", perder_partida);
@@ -871,7 +868,7 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
          for(let i = 0; i < inakiLose.length; i++ ){
           inakiLose[i].addEventListener("click", perder_partida);
          }
-        }
+        
             setTimeout(() => {
                 wilson3.style.marginBottom  = "-540px";
             }, 0)
@@ -903,7 +900,7 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
         let victorWin = document.querySelectorAll(".victor-win");
         for(let i = 0; i < victorWin.length; i++ ){
          victorWin[i].addEventListener("click", ganar_partida);
-        
+        }
          let wilsonLose = document.querySelectorAll(".wilson-win");
          for(let i = 0; i < wilsonLose.length; i++ ){
           wilsonLose[i].addEventListener("click", perder_partida);
@@ -912,7 +909,6 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
          for(let i = 0; i < inakiLose.length; i++ ){
           inakiLose[i].addEventListener("click", perder_partida);
          }
-        }
             setTimeout(() => {
                 victor3.style.marginBottom  = "-540px";
             }, 0);
@@ -945,7 +941,7 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
         let inakiWin = document.querySelectorAll(".inaki-win");
         for(let i = 0; i < inakiWin.length; i++ ){
          inakiWin[i].addEventListener("click", ganar_partida);
-        
+        }
          let victorLose = document.querySelectorAll(".victor-win");
          for(let i = 0; i < victorLose.length; i++ ){
           victorLose[i].addEventListener("click", perder_partida);
@@ -954,8 +950,6 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
          for(let i = 0; i < wilsonLose.length; i++ ){
           wilsonLose[i].addEventListener("click", perder_partida);
          }
-    
-    }
             
             setTimeout(() => {
                 inaki4.style.marginBottom  = "-360px";
@@ -987,7 +981,7 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
         let wilsonWin = document.querySelectorAll(".wilson-win");
         for(let i = 0; i < wilsonWin.length; i++ ){
         wilsonWin[i].addEventListener("click", ganar_partida);
-            
+        }   
         let victorLose = document.querySelectorAll(".victor-win");
         for(let i = 0; i < victorLose.length; i++ ){
         victorLose[i].addEventListener("click", perder_partida);
@@ -995,8 +989,8 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
         let inakiLose = document.querySelectorAll(".inaki-win");
         for(let i = 0; i < inakiLose.length; i++ ){
         inakiLose[i].addEventListener("click", perder_partida);
-    }
-    }
+        }
+
             setTimeout(() => {
                 wilson4.style.marginBottom  = "-360px";
             }, 0)
@@ -1026,7 +1020,7 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
         let victorWin = document.querySelectorAll(".victor-win");
         for(let i = 0; i < victorWin.length; i++ ){
          victorWin[i].addEventListener("click", ganar_partida);
-        
+        }
          let wilsonLose = document.querySelectorAll(".wilson-win");
          for(let i = 0; i < wilsonLose.length; i++ ){
           wilsonLose[i].addEventListener("click", perder_partida);
@@ -1035,7 +1029,6 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
          for(let i = 0; i < inakiLose.length; i++ ){
           inakiLose[i].addEventListener("click", perder_partida);
          }
-        }
             setTimeout(() => {
                 victor4.style.marginBottom  = "-360px";
             }, 0);
@@ -1067,7 +1060,7 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
         let inakiWin = document.querySelectorAll(".inaki-win");
         for(let i = 0; i < inakiWin.length; i++ ){
         inakiWin[i].addEventListener("click", ganar_partida);
-            
+        }    
         let victorLose = document.querySelectorAll(".victor-win");
         for(let i = 0; i < victorLose.length; i++ ){
         victorLose[i].addEventListener("click", perder_partida);
@@ -1075,8 +1068,6 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
         let wilsonLose = document.querySelectorAll(".wilson-win");
         for(let i = 0; i < wilsonLose.length; i++ ){
         wilsonLose[i].addEventListener("click", perder_partida);
-        }
-        
         }
             setTimeout(() => {
                 inaki5.style.marginBottom  = "-215px";
@@ -1107,7 +1098,7 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
             let wilsonWin = document.querySelectorAll(".wilson-win");
             for(let i = 0; i < wilsonWin.length; i++ ){
             wilsonWin[i].addEventListener("click", ganar_partida);
-                
+            }
             let victorLose = document.querySelectorAll(".victor-win");
             for(let i = 0; i < victorLose.length; i++ ){
             victorLose[i].addEventListener("click", perder_partida);
@@ -1115,7 +1106,6 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
             let inakiLose = document.querySelectorAll(".inaki-win");
             for(let i = 0; i < inakiLose.length; i++ ){
             inakiLose[i].addEventListener("click", perder_partida);
-        }
         }
             setTimeout(() => {
                 wilson5.style.marginBottom  = "-215px";
@@ -1147,7 +1137,7 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
             let victorWin = document.querySelectorAll(".victor-win");
             for(let i = 0; i < victorWin.length; i++ ){
              victorWin[i].addEventListener("click", ganar_partida);
-            
+            }
              let wilsonLose = document.querySelectorAll(".wilson-win");
              for(let i = 0; i < wilsonLose.length; i++ ){
               wilsonLose[i].addEventListener("click", perder_partida);
@@ -1156,7 +1146,6 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
              for(let i = 0; i < inakiLose.length; i++ ){
               inakiLose[i].addEventListener("click", perder_partida);
              }
-            }
 
             setTimeout(() => {
                 victor5.style.marginBottom  = "-215px";
@@ -1190,7 +1179,7 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
         let inakiWin = document.querySelectorAll(".inaki-win");
         for(let i = 0; i < inakiWin.length; i++ ){
         inakiWin[i].addEventListener("click", ganar_partida);
-            
+        }   
         let victorLose = document.querySelectorAll(".victor-win");
         for(let i = 0; i < victorLose.length; i++ ){
         victorLose[i].addEventListener("click", perder_partida);
@@ -1198,8 +1187,6 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
         let wilsonLose = document.querySelectorAll(".wilson-win");
         for(let i = 0; i < wilsonLose.length; i++ ){
         wilsonLose[i].addEventListener("click", perder_partida);
-        }
-        
         }
         
             setTimeout(() => {
@@ -1232,7 +1219,7 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
             let wilsonWin = document.querySelectorAll(".wilson-win");
             for(let i = 0; i < wilsonWin.length; i++ ){
             wilsonWin[i].addEventListener("click", ganar_partida);
-                
+            }
             let victorLose = document.querySelectorAll(".victor-win");
             for(let i = 0; i < victorLose.length; i++ ){
             victorLose[i].addEventListener("click", perder_partida);
@@ -1240,7 +1227,6 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
             let inakiLose = document.querySelectorAll(".inaki-win");
             for(let i = 0; i < inakiLose.length; i++ ){
             inakiLose[i].addEventListener("click", perder_partida);
-        }
         }
             setTimeout(() => {
                 wilson6.style.marginBottom  = "-545px";
@@ -1271,7 +1257,7 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
         let victorWin = document.querySelectorAll(".victor-win");
         for(let i = 0; i < victorWin.length; i++ ){
          victorWin[i].addEventListener("click", ganar_partida);
-        
+        }
          let wilsonLose = document.querySelectorAll(".wilson-win");
          for(let i = 0; i < wilsonLose.length; i++ ){
           wilsonLose[i].addEventListener("click", perder_partida);
@@ -1280,7 +1266,6 @@ record1Time.innerHTML = localStorage.getItem("tiempo de juego")
          for(let i = 0; i < inakiLose.length; i++ ){
           inakiLose[i].addEventListener("click", perder_partida);
          }
-        }
         
             setTimeout(() => {
                 victor6.style.marginBottom  = "-545px";
