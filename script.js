@@ -20,6 +20,9 @@ const difFace = document.querySelector(".again-lose");
 const page4 = document.querySelector(".who-face-pattle");
 const sameFaceWin = document.querySelector(".return");
 const difFaceWin = document.querySelector(".again");
+const record1 = document.querySelector(".record-screen1")
+const record1Time = document.querySelector(".time-record-1")
+
 
   /*posiciones caras*/
   let inaki1 = document.querySelector(".inaki1");
@@ -548,6 +551,10 @@ function function_difFace() {
 
 
 function hardMode() {
+
+record1.innerHTML = localStorage.getItem("username");
+record1Time.innerHTML = localStorage.getItem("tiempo de juego")
+
    
 
     /*TIEMPO DE JUEGO */
