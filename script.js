@@ -107,7 +107,7 @@ function function_play(event){
     }
     
     /*COUNTDOWN 5 SEGUNDOS*/
-    let contador = 0;
+    let contador = 4;
     const message = setInterval(()=>{  
         console.log(contador);
         contador--;
@@ -489,7 +489,7 @@ function function_sameFaceWin() {
         playing.classList.replace('playing', 'playing-show');
         
         
-        let contador = 5;
+        let contador = 4;
         const message = setInterval(()=>{  
         console.log(contador);
         contador--;
@@ -549,7 +549,7 @@ function function_difFaceWinPlay(event){
         playing.classList.replace('playing', 'playing-show');
         
         
-        let contador = 5;
+        let contador = 4;
         const message = setInterval(()=>{  
         console.log(contador);
         contador--;
@@ -607,7 +607,7 @@ function function_sameFace() {
     if(playing.classList.contains('playing')){
         playing.classList.replace('playing', 'playing-show');
         
-        let contador = 5;
+        let contador = 4;
         const message = setInterval(()=>{  
         console.log(contador);
         contador--;
