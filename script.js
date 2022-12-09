@@ -145,7 +145,9 @@ function function_comenzarPartida () {
         page2.classList.replace("desktop-2", "desktop-2-show");
     }
 }
-
+let jugadorDatos = localStorage.getItem("Jugador") || [];
+console.log(jugadorDatos);
+let transformString;
 
 function easyMode() {
 
@@ -166,6 +168,16 @@ function easyMode() {
         localStorage.setItem("tiempo de juego", tiempoJuego.toFixed(2) );
         if(winner.classList.contains("winner-show")){
             clearInterval(time);
+            while(jugadorDatos.length <= 5){
+                jugadorDatos.push({
+                    jugador: localStorage.getItem("username"),
+                    tiempo: localStorage.getItem("tiempo de juego")
+                })
+                console.log(jugadorDatos);
+                transformString = JSON.stringify(jugadorDatos);
+                localStorage.setItem("Jugador", transformString);
+                return;   
+            } 
         }
     }, 10);
 
