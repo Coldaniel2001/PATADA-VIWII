@@ -145,9 +145,9 @@ function function_comenzarPartida () {
         page2.classList.replace("desktop-2", "desktop-2-show");
     }
 }
-let jugadorDatos = localStorage.getItem("Jugador") || [];
+let jugadorDatos = JSON.parse(localStorage.getItem("Jugador")) || [];
 console.log(jugadorDatos);
-let transformString;
+
 
 function easyMode() {
 
@@ -157,7 +157,7 @@ function easyMode() {
     for(let i = 0; i < imgEase.length; i++ ){
      imgEase[i].addEventListener("click", ganar_partida);
     }
-  
+   
 
     /*TIEMPO DE JUEGO */
     let tiempoJuego = 0;
@@ -168,16 +168,7 @@ function easyMode() {
         localStorage.setItem("tiempo de juego", tiempoJuego.toFixed(2) );
         if(winner.classList.contains("winner-show")){
             clearInterval(time);
-            while(jugadorDatos.length <= 5){
-                jugadorDatos.push({
-                    jugador: localStorage.getItem("username"),
-                    tiempo: localStorage.getItem("tiempo de juego")
-                })
-                console.log(jugadorDatos);
-                transformString = JSON.stringify(jugadorDatos);
-                localStorage.setItem("Jugador", transformString);
-                return;   
-            } 
+             
         }
     }, 10);
 
@@ -312,71 +303,51 @@ function ganar_partida(){
     
     caraSeleccionada.innerHTML = `"${localStorage.getItem('character')}"`;
     recordSegundos.innerHTML = `${localStorage.getItem("tiempo de juego")} segundos`;
-    recordTime.innerHTML = localStorage.getItem("tiempo de juego");
-    record.innerHTML = localStorage.getItem("username");
-
-    let records = [record1, record2, record3, record4, record5];
-    let recordsTime = [record1Time, record2Time, record3Time, record4Time, record5Time];
-
-    for(let i = 0; i < records.length; i++){
-        if(records[i].innerHTML == ""){
-            records[i].innerHTML = localStorage.getItem("username");
-            recordsTime[i].innerHTML = localStorage.getItem("tiempo de juego");
-            return;
-        }
-    }
-
-    if(recordTime.innerHTML < record1Time.innerHTML){
-        record5.innerHTML = record4.innerHTML;
-        record4.innerHTML = record3.innerHTML;
-        record3.innerHTML = record2.innerHTML;
-        record2.innerHTML = record1.innerHTML;
-        record1.innerHTML = record.innerHTML;
-        
-        
-        record5Time.innerHTML = record4Time.innerHTML
-        record4Time.innerHTML = record3Time.innerHTML
-        record3Time.innerHTML = record2Time.innerHTML
-        record2Time.innerHTML = record1Time.innerHTML
-        record1Time.innerHTML = recordTime.innerHTML
-
-        
-
-    } else if(recordTime.innerHTML > record1Time.innerHTML && recordTime.innerHTML < record2Time.innerHTML) {
-        record5.innerHTML = record4.innerHTML;
-        record4.innerHTML = record3.innerHTML;
-        record3.innerHTML = record2.innerHTML;
-        record2.innerHTML = record.innerHTML;
-        
-        record5Time.innerHTML = record4Time.innerHTML
-        record4Time.innerHTML = record3Time.innerHTML
-        record3Time.innerHTML = record2Time.innerHTML
-        record2Time.innerHTML = recordTime.innerHTML
-          
-
-    } else if(recordTime.innerHTML > record2Time.innerHTML && recordTime.innerHTML < record3Time.innerHTML) {
-        record5.innerHTML = record4.innerHTML;
-        record4.innerHTML = record3.innerHTML;
-        record3.innerHTML = record.innerHTML;
-        
-        record5Time.innerHTML = record4Time.innerHTML
-        record4Time.innerHTML = record3Time.innerHTML
-        record3Time.innerHTML = recordTime.innerHTML
     
+    let records = [record1, record2, record3, record4, record5, record];
+    let recordsTime = [record1Time, record2Time, record3Time, record4Time, record5Time, recordTime];
 
-    } else if(recordTime.innerHTML > record3Time.innerHTML && recordTime.innerHTML < record4Time.innerHTML) {
-        record5.innerHTML = record4.innerHTML;
-        record4.innerHTML = record.innerHTML;
+        
+            jugadorDatos.push({
+                jugador: localStorage.getItem("username"),
+                tiempo: localStorage.getItem("tiempo de juego")
+            })
+       
         
         
-        record5Time.innerHTML = record4Time.innerHTML
-        record4Time.innerHTML = recordTime.innerHTML
-        
-    } else if(recordTime.innerHTML > record4Time.innerHTML && recordTime.innerHTML < record5Time.innerHTML) {
-        record5.innerHTML = record.innerHTML;
-        record5Time.innerHTML = recordTime.innerHTML
+        let transformString = JSON.stringify(jugadorDatos);
+        localStorage.setItem("Jugador", transformString); 
+        jugadorDatos.sort(function(a, b) {
+            if(a.tiempo < b.tiempo){
+                return -1;
+            } else if (a.tiempo < b.tiempo){
+                return 1;
+            } else {
+                return 0;
+            }
+        });
+    if(records[0].innerHTML == "" && jugadorDatos[0] != ""){
+        records[0].innerHTML = jugadorDatos[0].jugador;
+        recordsTime[0].innerHTML = parseFloat(jugadorDatos[0].tiempo);
+    } 
+    if(records[1].innerHTML == "" && jugadorDatos[1] != ""){
+        records[1].innerHTML = jugadorDatos[1].jugador;
+        recordsTime[1].innerHTML = parseFloat(jugadorDatos[1].tiempo);
     }
-
+    if(records[2].innerHTML == "" && jugadorDatos[2] != ""){
+        records[2].innerHTML = jugadorDatos[2].jugador;
+        recordsTime[2].innerHTML = parseFloat(jugadorDatos[2].tiempo)
+    }
+    if(records[3].innerHTML == "" && jugadorDatos[3] != ""){
+        records[3].innerHTML = jugadorDatos[3].jugador;
+        recordsTime[3].innerHTML = parseFloat(jugadorDatos[3].tiempo)
+    }
+    if(records[4].innerHTML == "" && jugadorDatos[4] != ""){
+        records[4].innerHTML = jugadorDatos[4].jugador;
+        recordsTime[4].innerHTML = parseFloat(jugadorDatos[4].tiempo)
+    }
+        
+    
 
     if(localStorage.getItem("Numero Aleatorio") == 1){
         if(localStorage.getItem("character") == "Inaki"){
@@ -473,6 +444,7 @@ function ganar_partida(){
             }, 0);
         }
     }
+    
 }
 
 function function_sameFaceWin() {
