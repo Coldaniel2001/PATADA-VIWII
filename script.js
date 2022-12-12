@@ -21,14 +21,13 @@ const page4 = document.querySelector(".who-face-pattle");
 const sameFaceWin = document.querySelector(".return");
 const difFaceWin = document.querySelector(".again");
 
-const record = document.querySelector(".record-screen1")
 const record1 = document.querySelector(".record-screen1-bueno")
 const record2 = document.querySelector(".record-screen2")
 const record3 = document.querySelector(".record-screen3")
 const record4 = document.querySelector(".record-screen4")
 const record5 = document.querySelector(".record-screen5")
 
-const recordTime = document.querySelector(".time-record-1")
+
 const record1Time = document.querySelector(".time-record-1-bueno")
 const record2Time = document.querySelector(".time-record-2")
 const record3Time = document.querySelector(".time-record-3")
@@ -304,8 +303,8 @@ function ganar_partida(){
     caraSeleccionada.innerHTML = `"${localStorage.getItem('character')}"`;
     recordSegundos.innerHTML = `${localStorage.getItem("tiempo de juego")} segundos`;
     
-    let records = [record1, record2, record3, record4, record5, record];
-    let recordsTime = [record1Time, record2Time, record3Time, record4Time, record5Time, recordTime];
+    let records = [record1, record2, record3, record4, record5];
+    let recordsTime = [record1Time, record2Time, record3Time, record4Time, record5Time];
 
         
             jugadorDatos.push({
@@ -320,7 +319,7 @@ function ganar_partida(){
         jugadorDatos.sort(function(a, b) {
             if(a.tiempo < b.tiempo){
                 return -1;
-            } else if (a.tiempo < b.tiempo){
+            } else if (a.tiempo > b.tiempo){
                 return 1;
             } else {
                 return 0;
